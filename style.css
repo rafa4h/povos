@@ -6,18 +6,18 @@
 }
 
 :root {
-  --black: #0a0a0a;
-  --chumbo: #2d2d2d;
-  --chumbo-light: #3a3a3a;
-  --terracota: #cc4b2c;
-  --terracota-hover: #e55a3a;
-  --amarelo: #d4b87a;
-  --amarelo-faded: #c9b17a;
-  --sangue: #8b1a1a;
-  --sangue-light: #a32b2b;
-  --text: #e0d8cc;
-  --text-muted: #998e80;
-  --bg: #0a0a0a;
+  --black: #f8f3eb;
+  --chumbo: #efe7d9;
+  --chumbo-light: #dfd3be;
+  --terracota: #c84225;        /* Laranja avermelhado principal (Urucum) */
+  --terracota-hover: #a83319;  /* Tom mais intenso no hover */
+  --amarelo: #8f4726;          /* Terra/ocre escuro para subtítulos e títulos de cards */
+  --amarelo-faded: #a35a38;
+  --sangue: #c84225;
+  --sangue-light: #e05838;
+  --text: #2c2119;             /* Marrom escuro para ótima leitura sobre o bege */
+  --text-muted: #6b5949;       /* Marrom suave para citações e subtítulos */
+  --bg: #f8f3eb;               /* Bege bem claro */
   --font-serif: 'Merriweather', Georgia, 'Times New Roman', serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -41,7 +41,7 @@ body {
   font-size: 0.98rem;
   line-height: 1.85;
   color: var(--text);
-  opacity: 0.88;
+  opacity: 0.92;
 }
 
 a {
@@ -63,9 +63,9 @@ a {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(10, 10, 10, 0.92);
+  background: rgba(248, 243, 235, 0.92);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(212, 184, 122, 0.08);
+  border-bottom: 1px solid rgba(200, 66, 37, 0.14);
   padding: 0 2rem;
   height: 60px;
   display: flex;
@@ -82,7 +82,7 @@ a {
 .nav-menu a {
   color: var(--text-muted);
   font-family: var(--font-sans);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.85rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -97,7 +97,7 @@ a {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 1.5px;
+  height: 2px;
   background: var(--terracota);
   transition: width 0.3s ease;
 }
@@ -157,6 +157,8 @@ a {
   gap: 3rem;
   max-width: 1000px;
   padding: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .wall-svg {
@@ -185,7 +187,7 @@ a {
 
 .hero-subtitle {
   font-family: var(--font-sans);
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1rem;
   color: var(--amarelo);
   letter-spacing: 4px;
@@ -208,12 +210,13 @@ a {
   font-family: var(--font-sans);
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--bg);
+  color: #fffaf3;
   background: var(--terracota);
   padding: 0.75rem 2rem;
-  border-radius: 0;
+  border-radius: 2px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  box-shadow: 0 4px 14px rgba(200, 66, 37, 0.25);
   transition: all 0.3s ease;
 }
 
@@ -222,7 +225,7 @@ a {
   transform: scale(1.03);
 }
 
-/* ===== INK DROPS ===== */
+/* ===== INK DROPS (Gotas de Urucum) ===== */
 .ink-drops {
   position: absolute;
   top: 0;
@@ -238,7 +241,7 @@ a {
   position: absolute;
   width: 4px;
   height: 4px;
-  background: var(--sangue);
+  background: var(--terracota);
   border-radius: 50%;
   opacity: 0;
   animation: ink-fall linear infinite;
@@ -250,13 +253,13 @@ a {
     transform: translateY(-30px) scale(0);
   }
   10% {
-    opacity: 0.3;
+    opacity: 0.35;
   }
   50% {
-    opacity: 0.15;
+    opacity: 0.2;
   }
   90% {
-    opacity: 0.1;
+    opacity: 0.12;
   }
   100% {
     opacity: 0;
@@ -264,14 +267,14 @@ a {
   }
 }
 
-/* ===== KISS ANIMATION ===== */
+/* ===== KISS / ELEMENT ANIMATION ===== */
 .kiss-group {
   animation: kiss-pulse 4s ease-in-out infinite;
 }
 
 @keyframes kiss-pulse {
   0%, 100% {
-    opacity: 0.7;
+    opacity: 0.85;
   }
   50% {
     opacity: 1;
@@ -284,11 +287,11 @@ a {
 
 @keyframes kiss-glow {
   0%, 100% {
-    opacity: 0.3;
+    opacity: 0.4;
     stroke-width: 1;
   }
   50% {
-    opacity: 0.9;
+    opacity: 0.95;
     stroke-width: 2;
   }
 }
@@ -298,14 +301,14 @@ a {
 }
 
 @keyframes scribble-fade {
-  0%, 100% { opacity: 0.08; }
-  50% { opacity: 0.2; }
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.4; }
 }
 
 /* ===== SECTIONS ===== */
 .section {
   padding: 6rem 0 5rem;
-  border-bottom: 1px solid rgba(212, 184, 122, 0.05);
+  border-bottom: 1px solid rgba(143, 71, 38, 0.14);
 }
 
 .section-title {
@@ -430,16 +433,17 @@ a {
 }
 
 .timeline-card {
-  background: rgba(45, 45, 45, 0.35);
-  border: 1px solid rgba(212, 184, 122, 0.08);
+  background: #f2eadc;
+  border: 1px solid rgba(200, 66, 37, 0.18);
   padding: 1.5rem;
   width: 100%;
+  box-shadow: 0 4px 16px rgba(44, 33, 25, 0.04);
   transition: all 0.3s ease;
 }
 
 .timeline-card:hover {
-  background: rgba(45, 45, 45, 0.55);
-  border-color: rgba(204, 75, 44, 0.25);
+  background: #ede2cf;
+  border-color: rgba(200, 66, 37, 0.45);
   transform: scale(1.01);
 }
 
@@ -493,7 +497,7 @@ a {
   100% { stroke-dashoffset: 0; }
 }
 
-/* ===== CHARACTERS ===== */
+/* ===== CHARACTERS / LIDERANÇAS ===== */
 .characters-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -501,17 +505,18 @@ a {
 }
 
 .char-card {
-  background: rgba(45, 45, 45, 0.25);
-  border: 1px solid rgba(212, 184, 122, 0.06);
+  background: #f2eadc;
+  border: 1px solid rgba(200, 66, 37, 0.16);
   padding: 2rem 1.5rem;
+  box-shadow: 0 4px 16px rgba(44, 33, 25, 0.04);
   transition: all 0.4s ease;
   text-align: center;
   cursor: default;
 }
 
 .char-card:hover {
-  background: rgba(45, 45, 45, 0.45);
-  border-color: rgba(204, 75, 44, 0.2);
+  background: #ede2cf;
+  border-color: rgba(200, 66, 37, 0.42);
   transform: scale(1.02);
 }
 
@@ -543,13 +548,14 @@ a {
   display: inline-block;
   font-family: var(--font-sans);
   font-size: 0.7rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--amarelo);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 1rem;
   padding: 0.15rem 0.75rem;
-  border: 1px solid rgba(212, 184, 122, 0.15);
+  border: 1px solid rgba(200, 66, 37, 0.28);
+  background: rgba(200, 66, 37, 0.05);
 }
 
 .char-card p {
@@ -557,7 +563,7 @@ a {
   text-align: left;
 }
 
-/* ===== TEMAS ===== */
+/* ===== TEMAS / RITUAIS ===== */
 .temas-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -566,16 +572,17 @@ a {
 }
 
 .tema-card {
-  background: rgba(45, 45, 45, 0.2);
-  border: 1px solid rgba(212, 184, 122, 0.06);
+  background: #f2eadc;
+  border: 1px solid rgba(200, 66, 37, 0.16);
   padding: 2rem 1.5rem;
+  box-shadow: 0 4px 16px rgba(44, 33, 25, 0.04);
   transition: all 0.4s ease;
   cursor: default;
 }
 
 .tema-card:hover {
-  background: rgba(45, 45, 45, 0.4);
-  border-color: rgba(204, 75, 44, 0.2);
+  background: #ede2cf;
+  border-color: rgba(200, 66, 37, 0.42);
   transform: scale(1.02);
 }
 
@@ -599,7 +606,7 @@ a {
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: 1rem;
-  color: var(--amarelo);
+  color: var(--terracota);
   margin-bottom: 0.75rem;
 }
 
@@ -607,7 +614,7 @@ a {
   font-size: 0.88rem;
 }
 
-/* ===== DON QUIXOTE ===== */
+/* ===== GUARDIAN / QUIXOTE SVG ===== */
 .quixote-container {
   display: flex;
   justify-content: center;
@@ -617,12 +624,12 @@ a {
 .quixote-svg {
   width: 140px;
   height: auto;
-  opacity: 0.5;
+  opacity: 0.75;
   transition: opacity 0.5s ease;
 }
 
 .quixote-svg:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .lance-group {
@@ -683,7 +690,7 @@ a {
   gap: 2rem;
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(212, 184, 122, 0.08);
+  border-top: 1px solid rgba(200, 66, 37, 0.16);
 }
 
 .destaque-item {
@@ -710,7 +717,8 @@ a {
 .footer {
   padding: 3rem 0;
   text-align: center;
-  border-top: 1px solid rgba(212, 184, 122, 0.06);
+  background: #f2eadc;
+  border-top: 1px solid rgba(200, 66, 37, 0.16);
 }
 
 .footer p {
@@ -722,8 +730,8 @@ a {
 
 .footer-quote {
   font-style: italic;
-  color: var(--amarelo);
-  opacity: 0.5;
+  color: var(--terracota);
+  opacity: 0.8;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -737,13 +745,13 @@ a {
     top: 60px;
     left: 0;
     right: 0;
-    background: rgba(10, 10, 10, 0.97);
+    background: rgba(248, 243, 235, 0.98);
     flex-direction: column;
     padding: 2rem;
     gap: 1.5rem;
     transform: translateY(-120%);
     transition: transform 0.4s ease;
-    border-bottom: 1px solid rgba(212, 184, 122, 0.1);
+    border-bottom: 1px solid rgba(200, 66, 37, 0.18);
   }
 
   .nav-menu.active {
@@ -775,69 +783,3 @@ a {
 
   .section-title {
     font-size: 1.6rem;
-  }
-
-  .timeline-item.left,
-  .timeline-item.right {
-    padding-left: 3rem;
-    padding-right: 0;
-    flex-direction: row;
-  }
-
-  .timeline-marker {
-    left: 0;
-    transform: none;
-    width: 36px;
-    height: 36px;
-  }
-
-  .timeline-marker svg text {
-    display: none;
-  }
-
-  .timeline-line {
-    left: 18px;
-  }
-
-  .timeline-card {
-    margin-left: 1rem;
-  }
-
-  .autor-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .autor-photo {
-    width: 160px;
-  }
-
-  .autor-destaques {
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-
-  .characters-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .temas-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .wall-svg {
-    width: 180px;
-  }
-
-  .section {
-    padding: 4rem 0 3rem;
-  }
-}
