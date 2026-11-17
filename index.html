@@ -20,10 +20,10 @@
     </button>
     <ul class="nav-menu" id="navMenu">
       <li><a href="#inicio">Karajá</a></li>
-      <li><a href="#enredo">Ipsum Dolor</a></li>
-      <li><a href="#personagens">Consectetur</a></li>
-      <li><a href="#temas">Adipiscing Elit</a></li>
-      <li><a href="#autor">Sed Eiusmod</a></li>
+      <li><a href="#enredo">sobre os Karajá</a></li>
+      <li><a href="#personagens">PESSOAS MAIS IMPORTANTES</a></li>
+      <li><a href="#temas">Rituais</a></li>
+      <li><a href="#autor">A Importância</a></li>
     </ul>
   </nav>
 
@@ -32,49 +32,119 @@
     <div class="ink-drops" id="inkDrops"></div>
 
     <div class="hero-wall">
-      <svg viewBox="0 0 600 500" class="wall-svg" aria-hidden="true">
-        <defs>
-          <pattern id="brick" width="60" height="30" patternUnits="userSpaceOnUse">
-            <rect width="60" height="30" fill="none" stroke="#3a3a3a" stroke-width="1.5" opacity="0.6"/>
-            <line x1="0" y1="15" x2="60" y2="15" stroke="#3a3a3a" stroke-width="1" opacity="0.4"/>
-            <line x1="30" y1="0" x2="30" y2="15" stroke="#3a3a3a" stroke-width="1" opacity="0.4"/>
-            <line x1="0" y1="15" x2="0" y2="30" stroke="#3a3a3a" stroke-width="1" opacity="0.4"/>
-            <line x1="60" y1="15" x2="60" y2="30" stroke="#3a3a3a" stroke-width="1" opacity="0.4"/>
-          </pattern>
-          <radialGradient id="kissGlow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#cc4b2c" stop-opacity="0.3"/>
-            <stop offset="100%" stop-color="#cc4b2c" stop-opacity="0"/>
-          </radialGradient>
-          <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#1a1a1a"/>
-            <stop offset="100%" stop-color="#0a0a0a"/>
-          </linearGradient>
-        </defs>
+<svg viewBox="0 0 500 500" class="wall-svg" aria-hidden="true">
+  <defs>
+    <!-- Máscara circular para deixar o fundo em formato de bola -->
+    <clipPath id="circleClip">
+      <circle cx="250" cy="250" r="245"/>
+    </clipPath>
 
-        <rect width="600" height="500" fill="url(#wallGrad)"/>
-        <rect width="600" height="500" fill="url(#brick)"/>
+    <!-- Padrão de fundo: Trançado de cestaria indígena -->
+    <pattern id="karajaWeave" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect width="60" height="60" fill="none" stroke="#c7b596" stroke-width="1" opacity="0.45"/>
+      <line x1="5" y1="10" x2="25" y2="10" stroke="#b8a382" stroke-width="1.5" opacity="0.55"/>
+      <line x1="5" y1="15" x2="25" y2="15" stroke="#b8a382" stroke-width="1.5" opacity="0.55"/>
+      <line x1="5" y1="20" x2="25" y2="20" stroke="#b8a382" stroke-width="1.5" opacity="0.55"/>
+      <line x1="35" y1="5" x2="35" y2="25" stroke="#b8a382" stroke-width="1.5" opacity="0.55"/>
+      <line x1="40" y1="5" x2="40" y2="25" stroke="#b8a382" stroke-width="1.5" opacity="0.55"/>
+      <line x1="45" y1="5" x2="45" y2="25" stroke="#b8a382" stroke-width="1.5" opacity="0.55"/>
+      <line x1="10" y1="35" x2="10" y2="55" stroke="#b8a382" stroke-width="1.5" opacity="0.55"/>
+      <line x1="15" y1="35" x2="15" y2="55" stroke="#b8a382" stroke-width="1.5" opacity="0.55"/>
+      <line x1="20" y1="35" x2="20" y2="55" stroke="#b8a382" stroke-width="1.5" opacity="0.55"/>
+      <line x1="35" y1="40" x2="55" y2="40" stroke="#b8a382" stroke-width="1.5" opacity="0.55"/>
+      <line x1="35" y1="45" x2="55" y2="45" stroke="#b8a382" stroke-width="1.5" opacity="0.55"/>
+      <line x1="35" y1="50" x2="55" y2="50" stroke="#b8a382" stroke-width="1.5" opacity="0.55"/>
+    </pattern>
 
-        <!-- Crack lines -->
-        <path d="M120 80 L140 130 L130 180 L160 220" stroke="#2d2d2d" stroke-width="1.5" fill="none" opacity="0.5"/>
-        <path d="M450 60 L430 120 L440 170" stroke="#2d2d2d" stroke-width="1.5" fill="none" opacity="0.4"/>
-        <path d="M300 350 L310 400 L290 430" stroke="#2d2d2d" stroke-width="1" fill="none" opacity="0.3"/>
+    <!-- Brilho central em tom de urucum -->
+    <radialGradient id="urucumGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cc4b2c" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#cc4b2c" stop-opacity="0"/>
+    </radialGradient>
 
-        <!-- The Kiss - painted lips -->
-        <g class="kiss-group">
-          <ellipse cx="300" cy="220" rx="80" ry="50" fill="url(#kissGlow)" opacity="0.4"/>
-          <path class="kiss-upper" d="M260 210 Q280 190 300 205 Q320 190 340 210 Q320 215 300 212 Q280 215 260 210Z" fill="#8b1a1a" opacity="0.85"/>
-          <path class="kiss-lower" d="M260 210 Q270 240 300 245 Q330 240 340 210 Q320 218 300 215 Q280 218 260 210Z" fill="#a32b2b" opacity="0.8"/>
-          <path class="kiss-shine" d="M285 205 Q295 200 300 205" stroke="#cc4b2c" stroke-width="1.5" fill="none" opacity="0.6"/>
-        </g>
+    <!-- Gradiente bege da parede -->
+    <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f2e6d0"/>
+      <stop offset="100%" stop-color="#dfd0b4"/>
+    </linearGradient>
+  </defs>
 
-        <!-- Hand-drawn scribbles -->
-        <g class="scribbles" opacity="0.15">
-          <path d="M50 350 Q70 340 90 360 Q110 380 130 350" stroke="#d4b87a" stroke-width="1" fill="none"/>
-          <path d="M400 400 Q430 380 460 410 Q490 440 520 400" stroke="#d4b87a" stroke-width="1" fill="none"/>
-          <path d="M180 380 Q200 370 220 390" stroke="#d4b87a" stroke-width="1" fill="none"/>
-        </g>
-      </svg>
+  <!-- Grupo recortado em formato circular -->
+  <g clip-path="url(#circleClip)">
+    <!-- Fundo Bege -->
+    <circle cx="250" cy="250" r="245" fill="url(#wallGrad)"/>
+    <circle cx="250" cy="250" r="245" fill="url(#karajaWeave)"/>
 
+    <!-- Rachaduras na parede -->
+    <path d="M85 85 L105 135 L95 185 L125 225" stroke="#9e8a6b" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M405 75 L385 135 L395 185" stroke="#9e8a6b" stroke-width="1.5" fill="none" opacity="0.45"/>
+    <path d="M250 420 L260 455 L240 485" stroke="#9e8a6b" stroke-width="1" fill="none" opacity="0.35"/>
+
+    <!-- Elemento Central Centralizado no Círculo: Boneca Ritxoko -->
+    <g class="ritxoko-group" transform="translate(250, 245) scale(1.45) translate(-300, -225)">
+      <!-- Brilho atrás da boneca -->
+      <ellipse cx="300" cy="235" rx="125" ry="135" fill="url(#urucumGlow)"/>
+
+      <!-- Cocar de Penas -->
+      <g class="headdress">
+        <path d="M292 145 Q265 110 260 95 Q280 110 295 142 Z" fill="#8b1a1a" opacity="0.9"/>
+        <path d="M300 142 Q292 100 300 80 Q308 100 300 142 Z" fill="#cc4b2c" opacity="0.9"/>
+        <path d="M308 145 Q335 110 340 95 Q320 110 305 142 Z" fill="#8b1a1a" opacity="0.9"/>
+        <rect x="282" y="140" width="36" height="6" rx="2" fill="#8c6239" opacity="0.9"/>
+      </g>
+
+      <!-- Cabeça e Cabelo -->
+      <circle cx="300" cy="175" r="26" fill="#0d0d0d"/>
+      <circle cx="300" cy="178" r="20" fill="#8c6239"/>
+      <path d="M280 172 Q300 162 320 172 L320 165 Q300 150 280 165 Z" fill="#0d0d0d"/>
+
+      <!-- Pintura Facial Karajá -->
+      <circle cx="288" cy="182" r="4" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+      <circle cx="288" cy="182" r="1.2" fill="#8b1a1a"/>
+      <circle cx="312" cy="182" r="4" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+      <circle cx="312" cy="182" r="1.2" fill="#8b1a1a"/>
+      <line x1="289" y1="175" x2="294" y2="175" stroke="#1a1a1a" stroke-width="1.5"/>
+      <line x1="306" y1="175" x2="311" y2="175" stroke="#1a1a1a" stroke-width="1.5"/>
+
+      <!-- Tronco e Braços -->
+      <path d="M282 200 L318 200 L335 245 L322 250 L314 222 L318 275 L282 275 L286 222 L278 250 L265 245 Z" fill="#8c6239"/>
+
+      <!-- Grafismos Corporais -->
+      <path d="M285 202 Q300 212 315 202" stroke="#8b1a1a" stroke-width="3" fill="none"/>
+      <polygon points="300,215 310,228 300,241 290,228" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+      <polygon points="300,221 305,228 300,235 295,228" fill="#8b1a1a"/>
+      <line x1="274" y1="225" x2="283" y2="228" stroke="#1a1a1a" stroke-width="2.5"/>
+      <line x1="326" y1="225" x2="317" y2="228" stroke="#1a1a1a" stroke-width="2.5"/>
+      <rect x="282" y="255" width="36" height="18" fill="#1a1a1a" opacity="0.85"/>
+      <path d="M284 264 L292 258 L300 264 L308 258 L316 264" stroke="#f2e6d0" stroke-width="1.5" fill="none"/>
+
+      <!-- Pernas -->
+      <path d="M282 275 L297 275 L295 335 L278 335 Z" fill="#8c6239"/>
+      <path d="M303 275 L318 275 L322 335 L305 335 Z" fill="#8c6239"/>
+      <line x1="281" y1="295" x2="296" y2="295" stroke="#8b1a1a" stroke-width="3"/>
+      <line x1="280" y1="305" x2="296" y2="305" stroke="#1a1a1a" stroke-width="2"/>
+      <line x1="304" y1="295" x2="319" y2="295" stroke="#8b1a1a" stroke-width="3"/>
+      <line x1="304" y1="305" x2="320" y2="305" stroke="#1a1a1a" stroke-width="2"/>
+    </g>
+
+    <!-- Rabiscos feitos à mão ajustados para dentro do círculo -->
+    <g class="scribbles" opacity="0.35">
+      <!-- Ondas do Rio Araguaia à esquerda -->
+      <path d="M45 340 Q65 325 85 340 T125 340 T165 340" stroke="#7a5832" stroke-width="1.5" fill="none"/>
+      <path d="M55 355 Q75 340 95 355 T135 355" stroke="#7a5832" stroke-width="1.2" fill="none"/>
+
+      <!-- Grafismo geométrico Karajá à direita -->
+      <path d="M350 370 L370 350 L390 370 L410 350 L430 370 L450 350" stroke="#7a5832" stroke-width="1.5" fill="none"/>
+      <path d="M350 382 L370 362 L390 382 L410 362 L430 382 L450 362" stroke="#7a5832" stroke-width="1.5" fill="none"/>
+
+      <!-- Peixe estilizado -->
+      <path d="M90 250 Q110 235 130 250 Q110 265 90 250 M130 250 L142 242 L142 258 Z" stroke="#7a5832" stroke-width="1.2" fill="none"/>
+    </g>
+  </g>
+
+  <!-- Borda externa circular para acabamento -->
+  <circle cx="250" cy="250" r="245" fill="none" stroke="#8c6239" stroke-width="4" opacity="0.75"/>
+</svg>
       <div class="hero-text">
         <h1 class="hero-title">Karajá</h1><br><span>sobre os Karajá</span></h1>
         <p class="hero-subtitle">Os **Iny-Karajá** (também conhecidos como Karajá ou Iny)</p>
@@ -131,10 +201,187 @@
           <h3>Casas adaptadas ao rio.</h3>
           <p class="texto-literario">• Tradicionalmente, construíam suas aldeias em barrancos altos ao longo dos rios Araguaia e Javaés para fugir das cheias. No período da seca, montavam acampamentos temporários diretamente nas praias de areia que surgiam no meio do rio. </p>
           <div class="timeline-icon-extras">
-            <svg viewBox="0 0 60 40" class="city-svg" aria-hidden="true">
-              <path d="M0 40 L0 25 L8 25 L8 15 L16 15 L16 25 L24 25 L24 5 L32 5 L32 25 L40 25 L40 30 L48 30 L48 20 L56 20 L56 30 L60 30 L60 40 Z" fill="#2d2d2d" opacity="0.6"/>
-              <path d="M10 40 Q20 20 30 35 Q40 18 50 35 Q55 25 60 32" fill="none" stroke="#d4b87a" stroke-width="0.8" opacity="0.4"/>
-            </svg>
+           <svg viewBox="0 0 800 500" class="karaja-village-svg" aria-hidden="true">
+  <defs>
+    <!-- Gradiente do Céu (Entardecer quente no Cerrado / Araguaia) -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7d9b4"/>
+      <stop offset="55%" stop-color="#f2e6d0"/>
+      <stop offset="100%" stop-color="#e3cca8"/>
+    </linearGradient>
+
+    <!-- Brilho do Sol -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cc4b2c" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#cc4b2c" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gradiente da Terra / Praia do Rio -->
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d9bd93"/>
+      <stop offset="100%" stop-color="#bfa074"/>
+    </linearGradient>
+
+    <!-- Gradiente do Rio Araguaia -->
+    <linearGradient id="riverGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b6e78"/>
+      <stop offset="50%" stop-color="#4d8894"/>
+      <stop offset="100%" stop-color="#34616b"/>
+    </linearGradient>
+
+    <!-- Textura de Palha das Ocas -->
+    <pattern id="thatchPattern" width="12" height="12" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="12" y2="12" stroke="#5e4124" stroke-width="1" opacity="0.35"/>
+      <line x1="6" y1="0" x2="12" y2="6" stroke="#5e4124" stroke-width="1" opacity="0.25"/>
+      <line x1="0" y1="6" x2="6" y2="12" stroke="#5e4124" stroke-width="1" opacity="0.25"/>
+    </pattern>
+
+    <!-- Símbolo Reutilizável: Palmeira / Buriti -->
+    <g id="palm-tree">
+      <!-- Tronco -->
+      <path d="M0 0 Q-5 -45 2 -90" stroke="#6b4c2e" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <!-- Folhas -->
+      <path d="M2 -90 Q-25 -105 -40 -80" stroke="#4a6b3b" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q-20 -115 -25 -100" stroke="#5c8249" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q28 -105 42 -80" stroke="#4a6b3b" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q22 -115 28 -100" stroke="#5c8249" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q0 -120 -5 -105" stroke="#689153" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <!-- Símbolo Reutilizável: Oca Tradicional Karajá -->
+    <g id="oca-house">
+      <!-- Sombra no chão -->
+      <ellipse cx="65" cy="82" rx="68" ry="8" fill="#8c6f47" opacity="0.5"/>
+      <!-- Corpo arqueado de palha -->
+      <path d="M5 80 Q5 10 65 10 Q125 10 125 80 Z" fill="#a67c52" stroke="#5e4124" stroke-width="2"/>
+      <path d="M5 80 Q5 10 65 10 Q125 10 125 80 Z" fill="url(#thatchPattern)"/>
+      <!-- Camadas horizontais de amarrado de palha -->
+      <path d="M12 55 Q65 50 118 55" stroke="#5e4124" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <path d="M24 32 Q65 28 106 32" stroke="#5e4124" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <!-- Entrada da oca -->
+      <path d="M52 80 L52 54 Q65 46 78 54 L78 80 Z" fill="#2b1d10"/>
+      <!-- Detalhe geométrico acima da porta -->
+      <path d="M50 42 L57 36 L65 42 L73 36 L80 42" stroke="#8b1a1a" stroke-width="2" fill="none"/>
+    </g>
+  </defs>
+
+  <!-- 1. Céu -->
+  <rect width="800" height="500" fill="url(#skyGrad)"/>
+
+  <!-- 2. Sol e Brilho -->
+  <circle cx="630" cy="120" r="110" fill="url(#sunGlow)"/>
+  <circle cx="630" cy="120" r="38" fill="#cc4b2c" opacity="0.85"/>
+
+  <!-- 3. Vegetação e Montes ao Fundo -->
+  <path d="M0 245 Q150 205 320 235 T640 220 T800 240 L800 265 L0 265 Z" fill="#87996b" opacity="0.65"/>
+  <path d="M0 255 Q220 225 450 250 T800 235 L800 270 L0 270 Z" fill="#687a4e" opacity="0.8"/>
+
+  <!-- 4. Terreno da Aldeia (Praia / Margem do Rio) -->
+  <path d="M0 255 L800 255 L800 395 Q550 375 380 395 T0 385 Z" fill="url(#groundGrad)"/>
+
+  <!-- 5. Rio Araguaia em Primeiro Plano -->
+  <path d="M0 385 Q200 375 380 395 T800 395 L800 500 L0 500 Z" fill="url(#riverGrad)"/>
+
+  <!-- Ondas e reflexos no rio -->
+  <g stroke="#a3cfd6" stroke-width="1.5" fill="none" opacity="0.45">
+    <path d="M60 425 Q90 418 120 425 T180 425"/>
+    <path d="M480 435 Q520 428 560 435 T640 435"/>
+    <path d="M260 465 Q300 458 340 465 T420 465"/>
+    <path d="M630 475 Q660 468 690 475"/>
+  </g>
+
+  <!-- 6. Árvores da Aldeia -->
+  <use href="#palm-tree" transform="translate(75, 265) scale(1.1)"/>
+  <use href="#palm-tree" transform="translate(115, 272) scale(0.85)"/>
+  <use href="#palm-tree" transform="translate(495, 265) scale(1.05)"/>
+  <use href="#palm-tree" transform="translate(735, 275) scale(1.15)"/>
+
+  <!-- 7. Ocas da Aldeia (Dispostas em semicírculo tradicional) -->
+  <!-- Oca ao fundo esquerda -->
+  <use href="#oca-house" transform="translate(145, 205) scale(0.85)"/>
+  <!-- Oca ao fundo centro -->
+  <use href="#oca-house" transform="translate(335, 200) scale(0.82)"/>
+  <!-- Oca ao fundo direita -->
+  <use href="#oca-house" transform="translate(530, 210) scale(0.9)"/>
+  <!-- Oca principal esquerda -->
+  <use href="#oca-house" transform="translate(55, 255) scale(1.05)"/>
+  <!-- Oca principal direita -->
+  <use href="#oca-house" transform="translate(595, 260) scale(1.08)"/>
+
+  <!-- 8. Pátio Central: Fogueira, Cerâmicas e Moradores -->
+  <!-- Fogueira Central -->
+  <g transform="translate(380, 315)">
+    <ellipse cx="0" cy="12" rx="24" ry="6" fill="#785d38" opacity="0.6"/>
+    <!-- Lenha -->
+    <line x1="-16" y1="12" x2="14" y2="5" stroke="#4a2e16" stroke-width="4" stroke-linecap="round"/>
+    <line x1="16" y1="12" x2="-14" y2="5" stroke="#4a2e16" stroke-width="4" stroke-linecap="round"/>
+    <!-- Chamas -->
+    <path d="M-8 8 Q-12 -10 0 -22 Q12 -10 8 8 Z" fill="#cc4b2c"/>
+    <path d="M-4 8 Q-6 -4 0 -12 Q6 -4 4 8 Z" fill="#f2b84b"/>
+  </g>
+
+  <!-- Potes de Cerâmica (Ritxoko / Vasilhas) perto da oca direita -->
+  <g transform="translate(565, 340)">
+    <ellipse cx="0" cy="0" rx="10" ry="8" fill="#8b1a1a"/>
+    <ellipse cx="0" cy="-7" rx="6" ry="2" fill="#2b1d10"/>
+    <path d="M-9 0 L-3 -3 L3 2 L9 -1" stroke="#f2e6d0" stroke-width="1" fill="none"/>
+
+    <ellipse cx="18" cy="3" rx="7" ry="6" fill="#a65233"/>
+    <ellipse cx="18" cy="-2" rx="4" ry="1.5" fill="#2b1d10"/>
+  </g>
+
+  <!-- Indígena Karajá 1 (Perto da fogueira) -->
+  <g transform="translate(320, 310)">
+    <!-- Sombra -->
+    <ellipse cx="0" cy="24" rx="8" ry="3" fill="#8c6f47" opacity="0.6"/>
+    <!-- Pernas e Tronco -->
+    <line x1="-3" y1="10" x2="-3" y2="23" stroke="#8c6239" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="3" y1="10" x2="3" y2="23" stroke="#8c6239" stroke-width="3.5" stroke-linecap="round"/>
+    <rect x="-6" y="-4" width="12" height="15" rx="3" fill="#8c6239"/>
+    <!-- Pintura corporal -->
+    <rect x="-6" y="7" width="12" height="4" fill="#1a1a1a"/>
+    <!-- Cabeça e Cocar -->
+    <circle cx="0" cy="-11" r="6" fill="#0d0d0d"/>
+    <circle cx="0" cy="-10" r="4.5" fill="#8c6239"/>
+    <path d="M-4 -16 L0 -24 L4 -16 Z" fill="#cc4b2c"/>
+  </g>
+
+  <!-- Indígena Karajá 2 (Caminhando para o rio) -->
+  <g transform="translate(445, 325)">
+    <ellipse cx="0" cy="24" rx="8" ry="3" fill="#8c6f47" opacity="0.6"/>
+    <line x1="-3" y1="10" x2="-5" y2="23" stroke="#8c6239" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="3" y1="10" x2="5" y2="23" stroke="#8c6239" stroke-width="3.5" stroke-linecap="round"/>
+    <rect x="-6" y="-4" width="12" height="15" rx="3" fill="#8c6239"/>
+    <line x1="-6" y1="2" x2="6" y2="2" stroke="#8b1a1a" stroke-width="2"/>
+    <circle cx="0" cy="-11" r="6" fill="#0d0d0d"/>
+    <circle cx="0" cy="-10" r="4.5" fill="#8c6239"/>
+    <path d="M-5 -15 L-2 -23 L0 -16 L2 -23 L5 -15 Z" fill="#8b1a1a"/>
+  </g>
+
+  <!-- 9. Canoa Tradicional no Rio Araguaia -->
+  <g transform="translate(215, 425)">
+    <!-- Sombra na água -->
+    <ellipse cx="55" cy="14" rx="60" ry="6" fill="#23444a" opacity="0.5"/>
+    <!-- Casco da Canoa -->
+    <path d="M0 4 Q55 20 110 4 Q95 15 55 15 Q15 15 0 4 Z" fill="#6b4423" stroke="#3d2511" stroke-width="1.5"/>
+    <!-- Grafismo na lateral da canoa -->
+    <path d="M25 9 L35 12 L45 9 L55 12 L65 9 L75 12 L85 9" stroke="#f2e6d0" stroke-width="1.2" fill="none"/>
+    <!-- Pescador na canoa -->
+    <rect x="46" y="-6" width="10" height="12" rx="2" fill="#8c6239"/>
+    <circle cx="51" cy="-12" r="5" fill="#0d0d0d"/>
+    <path d="M48 -17 L51 -24 L54 -17 Z" fill="#cc4b2c"/>
+    <!-- Remo na água -->
+    <line x1="54" y1="-2" x2="72" y2="24" stroke="#4a2e16" stroke-width="2.5" stroke-linecap="round"/>
+    <ellipse cx="73" cy="25" rx="3" ry="6" transform="rotate(-35 73 25)" fill="#8c6239"/>
+  </g>
+
+  <!-- 10. Pássaros voando ao fundo -->
+  <g stroke="#5e4124" stroke-width="1.5" fill="none" opacity="0.6">
+    <path d="M220 110 Q227 103 234 110 Q241 103 248 110"/>
+    <path d="M255 95 Q260 90 265 95 Q270 90 275 95"/>
+    <path d="M195 125 Q200 120 205 125 Q210 120 215 125"/>
+  </g>
+</svg>
           </div>
         </div>
       </div>
@@ -152,10 +399,243 @@
           <h3>Fala de homem e fala de mulher.</h3>
           <p class="texto-literario">• O idioma inyrybe possui uma variação linguística rara no mundo, na qual homens e mulheres usam pronúncias e palavras diferentes para dizer a mesma coisa.</p>
           <div class="timeline-icon-extras">
-            <svg viewBox="0 0 60 40" class="city-svg" aria-hidden="true">
-              <path d="M0 40 L0 30 L10 30 L10 20 L20 20 L20 30 L30 30 L30 15 L40 15 L40 30 L50 30 L50 25 L55 25 L55 30 L60 30 L60 40 Z" fill="#2d2d2d" opacity="0.6"/>
-              <path d="M5 40 Q15 30 25 38 Q35 28 45 36 Q50 32 55 38" fill="none" stroke="#8b1a1a" stroke-width="0.8" opacity="0.4"/>
-            </svg>
+ <svg viewBox="0 0 800 500" class="karaja-conversation-svg" aria-hidden="true">
+  <defs>
+    <!-- Gradiente do Céu -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7d9b4"/>
+      <stop offset="55%" stop-color="#f2e6d0"/>
+      <stop offset="100%" stop-color="#e3cca8"/>
+    </linearGradient>
+
+    <!-- Brilho do Sol -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cc4b2c" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#cc4b2c" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gradiente da Terra -->
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d9bd93"/>
+      <stop offset="100%" stop-color="#bfa074"/>
+    </linearGradient>
+
+    <!-- Gradiente do Rio Araguaia -->
+    <linearGradient id="riverGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b6e78"/>
+      <stop offset="50%" stop-color="#4d8894"/>
+      <stop offset="100%" stop-color="#34616b"/>
+    </linearGradient>
+
+    <!-- Textura de Palha -->
+    <pattern id="thatchPattern" width="12" height="12" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="12" y2="12" stroke="#5e4124" stroke-width="1" opacity="0.35"/>
+      <line x1="6" y1="0" x2="12" y2="6" stroke="#5e4124" stroke-width="1" opacity="0.25"/>
+      <line x1="0" y1="6" x2="6" y2="12" stroke="#5e4124" stroke-width="1" opacity="0.25"/>
+    </pattern>
+
+    <!-- Palmeira -->
+    <g id="palm-tree">
+      <path d="M0 0 Q-5 -45 2 -90" stroke="#6b4c2e" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q-25 -105 -40 -80" stroke="#4a6b3b" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q-20 -115 -25 -100" stroke="#5c8249" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q28 -105 42 -80" stroke="#4a6b3b" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q22 -115 28 -100" stroke="#5c8249" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q0 -120 -5 -105" stroke="#689153" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <!-- Oca Tradicional -->
+    <g id="oca-house">
+      <ellipse cx="65" cy="82" rx="68" ry="8" fill="#8c6f47" opacity="0.5"/>
+      <path d="M5 80 Q5 10 65 10 Q125 10 125 80 Z" fill="#a67c52" stroke="#5e4124" stroke-width="2"/>
+      <path d="M5 80 Q5 10 65 10 Q125 10 125 80 Z" fill="url(#thatchPattern)"/>
+      <path d="M12 55 Q65 50 118 55" stroke="#5e4124" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <path d="M24 32 Q65 28 106 32" stroke="#5e4124" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <path d="M52 80 L52 54 Q65 46 78 54 L78 80 Z" fill="#2b1d10"/>
+      <path d="M50 42 L57 36 L65 42 L73 36 L80 42" stroke="#8b1a1a" stroke-width="2" fill="none"/>
+    </g>
+  </defs>
+
+  <!-- 1. Céu e Sol -->
+  <rect width="800" height="500" fill="url(#skyGrad)"/>
+  <circle cx="660" cy="110" r="105" fill="url(#sunGlow)"/>
+  <circle cx="660" cy="110" r="36" fill="#cc4b2c" opacity="0.85"/>
+
+  <!-- 2. Vegetação ao Fundo -->
+  <path d="M0 245 Q150 205 320 235 T640 220 T800 240 L800 265 L0 265 Z" fill="#87996b" opacity="0.65"/>
+  <path d="M0 255 Q220 225 450 250 T800 235 L800 270 L0 270 Z" fill="#687a4e" opacity="0.8"/>
+
+  <!-- 3. Terreno e Rio -->
+  <path d="M0 255 L800 255 L800 400 Q550 380 380 400 T0 390 Z" fill="url(#groundGrad)"/>
+  <path d="M0 390 Q200 380 380 400 T800 400 L800 500 L0 500 Z" fill="url(#riverGrad)"/>
+
+  <!-- Ondas no Rio -->
+  <g stroke="#a3cfd6" stroke-width="1.5" fill="none" opacity="0.45">
+    <path d="M60 430 Q90 423 120 430 T180 430"/>
+    <path d="M480 440 Q520 433 560 440 T640 440"/>
+    <path d="M260 470 Q300 463 340 470 T420 470"/>
+  </g>
+
+  <!-- 4. Árvores e Ocas da Aldeia -->
+  <use href="#palm-tree" transform="translate(65, 265) scale(1.05)"/>
+  <use href="#palm-tree" transform="translate(745, 270) scale(1.1)"/>
+  <use href="#oca-house" transform="translate(115, 200) scale(0.8)"/>
+  <use href="#oca-house" transform="translate(550, 205) scale(0.85)"/>
+  <use href="#oca-house" transform="translate(35, 255) scale(0.95)"/>
+  <use href="#oca-house" transform="translate(625, 260) scale(1.0)"/>
+
+  <!-- 5. Fogueira entre eles -->
+  <g transform="translate(400, 345)">
+    <ellipse cx="0" cy="14" rx="28" ry="7" fill="#785d38" opacity="0.6"/>
+    <line x1="-18" y1="14" x2="16" y2="6" stroke="#4a2e16" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="18" y1="14" x2="-16" y2="6" stroke="#4a2e16" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M-9 9 Q-14 -12 0 -25 Q14 -12 9 9 Z" fill="#cc4b2c"/>
+    <path d="M-4 9 Q-7 -5 0 -14 Q7 -5 4 9 Z" fill="#f2b84b"/>
+  </g>
+
+  <!-- ========================================================= -->
+  <!-- 6. RODA DE CONVERSA (Personagens maiores em destaque)     -->
+  <!-- ========================================================= -->
+
+  <!-- PERSONAGEM 1: Esquerda (Gesticulando enquanto conta uma história) -->
+  <g transform="translate(310, 315) scale(1.35)">
+    <ellipse cx="0" cy="32" rx="14" ry="4" fill="#8c6f47" opacity="0.65"/>
+    <!-- Pernas -->
+    <rect x="-8" y="10" width="6" height="22" rx="3" fill="#8c6239"/>
+    <rect x="2" y="10" width="6" height="22" rx="3" fill="#8c6239"/>
+    <!-- Pintura nas pernas -->
+    <line x1="-8" y1="18" x2="-2" y2="18" stroke="#1a1a1a" stroke-width="2"/>
+    <line x1="2" y1="18" x2="8" y2="18" stroke="#1a1a1a" stroke-width="2"/>
+    <!-- Tronco -->
+    <rect x="-10" y="-12" width="20" height="24" rx="5" fill="#8c6239"/>
+    <!-- Grafismo corporal -->
+    <rect x="-10" y="6" width="20" height="5" fill="#1a1a1a"/>
+    <path d="M-6 -6 L0 0 L6 -6" stroke="#8b1a1a" stroke-width="2.5" fill="none"/>
+    <!-- Braço esquerdo (atrás) -->
+    <path d="M-10 -8 Q-16 2 -12 10" stroke="#8c6239" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <!-- Braço direito (levantado gesticulando para o amigo) -->
+    <path d="M10 -8 Q20 -12 24 -22" stroke="#8c6239" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <!-- Cabeça virada para a direita -->
+    <circle cx="0" cy="-23" r="10" fill="#0d0d0d"/>
+    <circle cx="2" cy="-22" r="8" fill="#8c6239"/>
+    <path d="M-8 -25 Q2 -32 10 -24 L10 -28 Q0 -36 -8 -28 Z" fill="#0d0d0d"/>
+    <!-- Pintura facial e expressão falando -->
+    <circle cx="4" cy="-21" r="2" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    <circle cx="6" cy="-23" r="1" fill="#1a1a1a"/>
+    <ellipse cx="7" cy="-18" rx="1.5" ry="2" fill="#2b1d10"/>
+    <!-- Cocar -->
+    <path d="M-4 -32 L-2 -44 L1 -32 Z" fill="#cc4b2c"/>
+    <path d="M0 -32 L3 -42 L5 -32 Z" fill="#8b1a1a"/>
+  </g>
+
+  <!-- PERSONAGEM 2: Direita (Ouvindo e respondendo com a mão no queixo/peito) -->
+  <g transform="translate(490, 315) scale(1.35)">
+    <ellipse cx="0" cy="32" rx="14" ry="4" fill="#8c6f47" opacity="0.65"/>
+    <!-- Pernas -->
+    <rect x="-8" y="10" width="6" height="22" rx="3" fill="#8c6239"/>
+    <rect x="2" y="10" width="6" height="22" rx="3" fill="#8c6239"/>
+    <line x1="-8" y1="20" x2="-2" y2="20" stroke="#8b1a1a" stroke-width="2"/>
+    <line x1="2" y1="20" x2="8" y2="20" stroke="#8b1a1a" stroke-width="2"/>
+    <!-- Tronco -->
+    <rect x="-10" y="-12" width="20" height="24" rx="5" fill="#8c6239"/>
+    <!-- Grafismo corporal -->
+    <line x1="-10" y1="-2" x2="10" y2="-2" stroke="#1a1a1a" stroke-width="2.5"/>
+    <line x1="-10" y1="3" x2="10" y2="3" stroke="#8b1a1a" stroke-width="2.5"/>
+    <!-- Braço direito (ao lado do corpo) -->
+    <path d="M10 -8 Q16 2 12 10" stroke="#8c6239" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <!-- Braço esquerdo (dobrado em gesto de conversa) -->
+    <path d="M-10 -8 Q-18 -2 -12 -14" stroke="#8c6239" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <!-- Cabeça virada para a esquerda -->
+    <circle cx="0" cy="-23" r="10" fill="#0d0d0d"/>
+    <circle cx="-2" cy="-22" r="8" fill="#8c6239"/>
+    <path d="M-10 -24 Q-2 -32 8 -25 L8 -28 Q0 -36 -10 -28 Z" fill="#0d0d0d"/>
+    <!-- Pintura facial e sorriso -->
+    <circle cx="-4" cy="-21" r="2" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    <circle cx="-6" cy="-23" r="1" fill="#1a1a1a"/>
+    <path d="M-8 -18 Q-6 -16 -4 -18" stroke="#1a1a1a" stroke-width="1.2" fill="none"/>
+    <!-- Cocar -->
+    <path d="M-5 -32 L-3 -42 L0 -32 Z" fill="#8b1a1a"/>
+    <path d="M-1 -32 L2 -44 L4 -32 Z" fill="#cc4b2c"/>
+  </g>
+
+  <!-- PERSONAGEM 3: Sentado perto da fogueira participando da prosa -->
+  <g transform="translate(360, 352) scale(1.2)">
+    <ellipse cx="0" cy="14" rx="14" ry="4" fill="#8c6f47" opacity="0.65"/>
+    <!-- Pernas dobradas (sentado) -->
+    <path d="M-6 8 L10 12 L16 6" stroke="#8c6239" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Tronco levemente inclinado -->
+    <rect x="-8" y="-10" width="16" height="20" rx="4" fill="#8c6239"/>
+    <rect x="-8" y="4" width="16" height="4" fill="#1a1a1a"/>
+    <!-- Braço apoiado no joelho -->
+    <path d="M2 -4 L12 6" stroke="#8c6239" stroke-width="4" stroke-linecap="round"/>
+    <!-- Cabeça olhando para cima/direita -->
+    <circle cx="0" cy="-19" r="9" fill="#0d0d0d"/>
+    <circle cx="2" cy="-18" r="7" fill="#8c6239"/>
+    <circle cx="4" cy="-17" r="1.8" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    <circle cx="5" cy="-19" r="1" fill="#1a1a1a"/>
+    <path d="M-2 -27 L0 -36 L2 -27 Z" fill="#cc4b2c"/>
+  </g>
+
+  <!-- ========================================================= -->
+  <!-- 7. BALÕES DE DIÁLOGO ESTILIZADOS (Com grafismos Karajá)   -->
+  <!-- ========================================================= -->
+
+  <!-- Balão do Personagem 1 (Contando sobre a pesca no Araguaia) -->
+  <g transform="translate(215, 195)">
+    <!-- Sombra do balão -->
+    <rect x="3" y="3" width="130" height="58" rx="16" fill="#5e4124" opacity="0.25"/>
+    <!-- Corpo do balão -->
+    <rect x="0" y="0" width="130" height="58" rx="16" fill="#fcf6eb" stroke="#5e4124" stroke-width="2"/>
+    <!-- Rabicho apontando para o personagem 1 -->
+    <path d="M85 58 L95 74 L105 58 Z" fill="#fcf6eb" stroke="#5e4124" stroke-width="2" stroke-linejoin="round"/>
+    <line x1="86" y1="58" x2="104" y2="58" stroke="#fcf6eb" stroke-width="3"/>
+
+    <!-- Conteúdo visual da fala: Peixe e ondas do rio -->
+    <g transform="translate(65, 29)">
+      <!-- Peixe estilizado em urucum -->
+      <path d="M-32 0 Q-12 -14 8 0 Q-12 14 -32 0 M8 0 L20 -9 L20 9 Z" fill="#cc4b2c" opacity="0.85"/>
+      <circle cx="-21" cy="-2" r="1.5" fill="#fcf6eb"/>
+      <!-- Ondas abaixo do peixe -->
+      <path d="M-28 13 Q-18 9 -8 13 T12 13" stroke="#3b6e78" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Balão do Personagem 2 (Respondendo com alegria / Sol e Canoa) -->
+  <g transform="translate(465, 185)">
+    <!-- Sombra do balão -->
+    <rect x="3" y="3" width="125" height="56" rx="16" fill="#5e4124" opacity="0.25"/>
+    <!-- Corpo do balão -->
+    <rect x="0" y="0" width="125" height="56" rx="16" fill="#fcf6eb" stroke="#5e4124" stroke-width="2"/>
+    <!-- Rabicho apontando para o personagem 2 -->
+    <path d="M35 56 L25 72 L50 56 Z" fill="#fcf6eb" stroke="#5e4124" stroke-width="2" stroke-linejoin="round"/>
+    <line x1="36" y1="56" x2="49" y2="56" stroke="#fcf6eb" stroke-width="3"/>
+
+    <!-- Conteúdo visual da fala: Grafismo Karajá e Sol/Alegria -->
+    <g transform="translate(62, 28)">
+      <!-- Grafismo geométrico tradicional em preto e vermelho -->
+      <path d="M-35 4 L-25 -6 L-15 4 L-5 -6 L5 4 L15 -6 L25 4 L35 -6" stroke="#1a1a1a" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M-35 12 L-25 2 L-15 12 L-5 2 L5 12 L15 2 L25 12 L35 2" stroke="#8b1a1a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- Pequeno balão de reação do Personagem 3 (Notas/Risos junto ao fogo) -->
+  <g transform="translate(382, 275)">
+    <circle cx="14" cy="14" r="14" fill="#fcf6eb" stroke="#5e4124" stroke-width="1.8"/>
+    <path d="M6 25 L2 32 L12 27 Z" fill="#fcf6eb" stroke="#5e4124" stroke-width="1.8"/>
+    <line x1="6" y1="25" x2="11" y2="27" stroke="#fcf6eb" stroke-width="2.5"/>
+    <!-- Três pontinhos de conversa -->
+    <circle cx="9" cy="14" r="1.8" fill="#8b1a1a"/>
+    <circle cx="14" cy="14" r="1.8" fill="#cc4b2c"/>
+    <circle cx="19" cy="14" r="1.8" fill="#8b1a1a"/>
+  </g>
+
+  <!-- 8. Canoa ancorada na margem -->
+  <g transform="translate(130, 420)">
+    <ellipse cx="45" cy="12" rx="48" ry="5" fill="#23444a" opacity="0.45"/>
+    <path d="M0 3 Q45 17 90 3 Q78 13 45 13 Q12 13 0 3 Z" fill="#6b4423" stroke="#3d2511" stroke-width="1.5"/>
+    <path d="M20 7 L28 10 L36 7 L44 10 L52 7 L60 10 L68 7" stroke="#f2e6d0" stroke-width="1.2" fill="none"/>
+  </g>
+</svg>
           </div>
         </div>
       </div>
@@ -174,11 +654,223 @@
           <h3>Origem no fundo do rio.</h3>
           <p class="texto-literario">• Segundo a mitologia Karajá, seus antepassados viviam em um mundo subaquático chamado Berohoky (o fundo do rio Araguaia). Eles teriam subido à superfície após encontrarem uma passagem, mas perderam o caminho de volta quando um ancestral obstruiu a entrada.</p>
           <div class="timeline-icon-extras">
-            <svg viewBox="0 0 60 40" class="city-svg" aria-hidden="true">
-              <rect x="20" y="5" width="20" height="35" rx="2" fill="none" stroke="#d4b87a" stroke-width="1" opacity="0.5"/>
-              <path d="M22 10 L38 10 M22 15 L38 15 M22 20 L38 20 M22 25 L38 25" stroke="#d4b87a" stroke-width="0.5" opacity="0.3"/>
-              <path d="M5 40 Q15 25 30 38 Q45 25 55 35" fill="none" stroke="#cc4b2c" stroke-width="0.8" opacity="0.3"/>
-            </svg>
+<svg viewBox="0 0 800 500" class="karaja-ritual-svg" aria-hidden="true">
+  <defs>
+    <!-- Gradiente do Céu (Entardecer / Anoitecer cerimonial) -->
+    <linearGradient id="ritualSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b2638"/>
+      <stop offset="45%" stop-color="#9c4838"/>
+      <stop offset="85%" stop-color="#e39d64"/>
+      <stop offset="100%" stop-color="#f2c68d"/>
+    </linearGradient>
+
+    <!-- Brilho da Fogueira Ritual -->
+    <radialGradient id="fireGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffaa33" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#cc4b2c" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#cc4b2c" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gradiente da Terra -->
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c49f6e"/>
+      <stop offset="100%" stop-color="#9e7a4d"/>
+    </linearGradient>
+
+    <!-- Gradiente do Rio Araguaia à noite -->
+    <linearGradient id="riverGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#223e4a"/>
+      <stop offset="50%" stop-color="#315869"/>
+      <stop offset="100%" stop-color="#1d3540"/>
+    </linearGradient>
+
+    <!-- Textura de Palha -->
+    <pattern id="thatchPattern" width="12" height="12" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="12" y2="12" stroke="#3d2814" stroke-width="1" opacity="0.4"/>
+      <line x1="6" y1="0" x2="12" y2="6" stroke="#3d2814" stroke-width="1" opacity="0.3"/>
+    </pattern>
+
+    <!-- Oca Tradicional -->
+    <g id="oca-house">
+      <ellipse cx="65" cy="82" rx="68" ry="8" fill="#5e4425" opacity="0.55"/>
+      <path d="M5 80 Q5 10 65 10 Q125 10 125 80 Z" fill="#8c633b" stroke="#473018" stroke-width="2"/>
+      <path d="M5 80 Q5 10 65 10 Q125 10 125 80 Z" fill="url(#thatchPattern)"/>
+      <path d="M52 80 L52 54 Q65 46 78 54 L78 80 Z" fill="#1f140a"/>
+      <!-- Luz interna suave saindo da oca -->
+      <path d="M55 80 L55 58 Q65 52 75 58 L75 80 Z" fill="#d97b38" opacity="0.35"/>
+    </g>
+
+    <!-- Palmeira -->
+    <g id="palm-tree">
+      <path d="M0 0 Q-5 -45 2 -90" stroke="#4a331d" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q-25 -105 -40 -80" stroke="#2f4725" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q-20 -115 -25 -100" stroke="#3c5930" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q28 -105 42 -80" stroke="#2f4725" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q22 -115 28 -100" stroke="#3c5930" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <!-- 1. Céu Cerimonial com Estrelas e Lua Crescente -->
+  <rect width="800" height="500" fill="url(#ritualSky)"/>
+  <circle cx="110" cy="70" r="18" fill="#fcf6eb" opacity="0.85"/>
+  <circle cx="118" cy="66" r="16" fill="#4f2d3b"/>
+  <!-- Estrelas -->
+  <g fill="#fcf6eb" opacity="0.7">
+    <circle cx="230" cy="50" r="1.5"/>
+    <circle cx="380" cy="40" r="2"/>
+    <circle cx="520" cy="65" r="1.5"/>
+    <circle cx="680" cy="45" r="2"/>
+    <circle cx="740" cy="85" r="1.2"/>
+  </g>
+
+  <!-- 2. Montes e Mata ao Fundo -->
+  <path d="M0 245 Q150 205 320 235 T640 220 T800 240 L800 265 L0 265 Z" fill="#465436" opacity="0.85"/>
+  <path d="M0 255 Q220 225 450 250 T800 235 L800 270 L0 270 Z" fill="#344027" opacity="0.9"/>
+
+  <!-- 3. Terreno da Aldeia e Rio Araguaia -->
+  <path d="M0 255 L800 255 L800 415 Q550 395 380 415 T0 405 Z" fill="url(#groundGrad)"/>
+  <path d="M0 405 Q200 395 380 415 T800 415 L800 500 L0 500 Z" fill="url(#riverGrad)"/>
+
+  <!-- Reflexo do fogo na água -->
+  <ellipse cx="400" cy="445" rx="85" ry="12" fill="#e3823b" opacity="0.25"/>
+
+  <!-- 4. Ocas e Árvores ao Fundo -->
+  <use href="#palm-tree" transform="translate(55, 260) scale(1.05)"/>
+  <use href="#palm-tree" transform="translate(745, 265) scale(1.1)"/>
+  <use href="#oca-house" transform="translate(95, 195) scale(0.8)"/>
+  <use href="#oca-house" transform="translate(335, 190) scale(0.75)"/>
+  <use href="#oca-house" transform="translate(575, 195) scale(0.8)"/>
+
+  <!-- 5. Círculo Ritual marcado no chão -->
+  <ellipse cx="400" cy="340" rx="230" ry="48" fill="none" stroke="#755530" stroke-width="2" stroke-dasharray="8 6" opacity="0.6"/>
+
+  <!-- 6. Grande Fogueira Cerimonial no Centro -->
+  <g transform="translate(400, 338)">
+    <!-- Aura de luz da fogueira -->
+    <ellipse cx="0" cy="-10" rx="190" ry="95" fill="url(#fireGlow)"/>
+    <ellipse cx="0" cy="14" rx="34" ry="8" fill="#593f20" opacity="0.7"/>
+    <!-- Troncos cruzados -->
+    <line x1="-22" y1="14" x2="20" y2="5" stroke="#3b220e" stroke-width="5" stroke-linecap="round"/>
+    <line x1="22" y1="14" x2="-20" y2="5" stroke="#3b220e" stroke-width="5" stroke-linecap="round"/>
+    <line x1="-10" y1="16" x2="10" y2="2" stroke="#291709" stroke-width="4.5" stroke-linecap="round"/>
+    <!-- Chamas altas -->
+    <path d="M-14 10 Q-20 -18 0 -38 Q20 -18 14 10 Z" fill="#cc4b2c"/>
+    <path d="M-8 10 Q-12 -10 0 -25 Q12 -10 8 10 Z" fill="#f29b38"/>
+    <path d="M-4 10 Q-5 -3 0 -13 Q5 -3 4 10 Z" fill="#fff099"/>
+    <!-- Faíscas subindo -->
+    <circle cx="-12" cy="-45" r="1.5" fill="#ffcc66"/>
+    <circle cx="8" cy="-54" r="1.8" fill="#ff9933"/>
+    <circle cx="-3" cy="-65" r="1.2" fill="#fff099"/>
+  </g>
+
+  <!-- ========================================================= -->
+  <!-- 7. FIGURAS DO RITUAL ARUANÃ (Máscaras sagradas de palha)   -->
+  <!-- ========================================================= -->
+
+  <!-- ARUANÃ 1 (Esquerda - Dançando com chocalho maracá) -->
+  <g transform="translate(245, 315) scale(1.25)">
+    <ellipse cx="0" cy="36" rx="18" ry="5" fill="#593f20" opacity="0.65"/>
+    <!-- Pernas em passo de dança -->
+    <path d="M-6 12 L-10 34" stroke="#7a522e" stroke-width="5" stroke-linecap="round"/>
+    <path d="M6 12 L12 30 L8 35" stroke="#7a522e" stroke-width="5" stroke-fill="none" stroke-linecap="round"/>
+    <!-- Saiote longo de palha de buriti -->
+    <path d="M-16 -12 L16 -12 L22 24 L-22 24 Z" fill="#c7a36b" stroke="#5e4124" stroke-width="1.5"/>
+    <path d="M-18 6 L18 6 M-20 15 L20 15" stroke="#8b1a1a" stroke-width="1.5"/>
+    <!-- Máscara Cilíndrica Aruanã cobrindo a cabeça e tronco -->
+    <rect x="-13" y="-36" width="26" height="26" rx="4" fill="#d9b982" stroke="#5e4124" stroke-width="1.5"/>
+    <!-- Grafismos geométricos sagrados na máscara -->
+    <path d="M-13 -28 L-6 -33 L0 -28 L6 -33 L13 -28" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+    <rect x="-8" y="-23" width="5" height="4" fill="#1a1a1a"/>
+    <rect x="3" y="-23" width="5" height="4" fill="#1a1a1a"/>
+    <path d="M-13 -15 L13 -15" stroke="#8b1a1a" stroke-width="2.5"/>
+    <!-- Penacho no topo da máscara -->
+    <path d="M-6 -36 L-8 -52 L-2 -36 Z" fill="#cc4b2c"/>
+    <path d="M-1 -36 L0 -56 L2 -36 Z" fill="#8b1a1a"/>
+    <path d="M3 -36 L8 -52 L6 -36 Z" fill="#cc4b2c"/>
+    <!-- Braço segurando Maracá (chocalho ritual) -->
+    <path d="M14 -6 L24 -14" stroke="#7a522e" stroke-width="4" stroke-linecap="round"/>
+    <line x1="24" y1="-14" x2="28" y2="-22" stroke="#4a2e16" stroke-width="2"/>
+    <circle cx="29" cy="-25" r="4.5" fill="#8b1a1a" stroke="#1a1a1a" stroke-width="1"/>
+    <path d="M29 -29 L27 -35 M29 -29 L32 -35" stroke="#f2b84b" stroke-width="1.5"/>
+  </g>
+
+  <!-- ARUANÃ 2 (Direita - Par ritual dançando em sincronia) -->
+  <g transform="translate(555, 315) scale(1.25)">
+    <ellipse cx="0" cy="36" rx="18" ry="5" fill="#593f20" opacity="0.65"/>
+    <!-- Pernas em movimento -->
+    <path d="M-6 12 L-12 30 L-8 35" stroke="#7a522e" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M6 12 L10 34" stroke="#7a522e" stroke-width="5" stroke-linecap="round"/>
+    <!-- Saiote de palha -->
+    <path d="M-16 -12 L16 -12 L22 24 L-22 24 Z" fill="#c7a36b" stroke="#5e4124" stroke-width="1.5"/>
+    <path d="M-18 6 L18 6 M-20 15 L20 15" stroke="#1a1a1a" stroke-width="1.5"/>
+    <!-- Máscara Aruanã -->
+    <rect x="-13" y="-36" width="26" height="26" rx="4" fill="#d9b982" stroke="#5e4124" stroke-width="1.5"/>
+    <path d="M-13 -28 L-6 -33 L0 -28 L6 -33 L13 -28" stroke="#8b1a1a" stroke-width="2" fill="none"/>
+    <rect x="-8" y="-23" width="5" height="4" fill="#1a1a1a"/>
+    <rect x="3" y="-23" width="5" height="4" fill="#1a1a1a"/>
+    <path d="M-13 -15 L13 -15" stroke="#1a1a1a" stroke-width="2.5"/>
+    <!-- Penacho -->
+    <path d="M-6 -36 L-8 -52 L-2 -36 Z" fill="#8b1a1a"/>
+    <path d="M-1 -36 L0 -56 L2 -36 Z" fill="#cc4b2c"/>
+    <path d="M3 -36 L8 -52 L6 -36 Z" fill="#8b1a1a"/>
+    <!-- Braço com Maracá -->
+    <path d="M-14 -6 L-24 -14" stroke="#7a522e" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-24" y1="-14" x2="-28" y2="-22" stroke="#4a2e16" stroke-width="2"/>
+    <circle cx="-29" cy="-25" r="4.5" fill="#cc4b2c" stroke="#1a1a1a" stroke-width="1"/>
+  </g>
+
+  <!-- ========================================================= -->
+  <!-- 8. DANÇARINOS E MÚSICOS COM PINTURA DE JENIPAPO E URUCUM  -->
+  <!-- ========================================================= -->
+
+  <!-- Dançarino 1 (Esquerda-centro, batendo o pé e cantando) -->
+  <g transform="translate(325, 345) scale(1.15)">
+    <ellipse cx="0" cy="28" rx="12" ry="3.5" fill="#593f20" opacity="0.6"/>
+    <rect x="-7" y="8" width="5" height="20" rx="2.5" fill="#7a522e"/>
+    <rect x="2" y="5" width="5" height="19" rx="2.5" fill="#7a522e"/>
+    <rect x="-9" y="-12" width="18" height="22" rx="4" fill="#7a522e"/>
+    <!-- Pintura corporal ritual -->
+    <rect x="-9" y="-4" width="18" height="10" fill="#1a1a1a" opacity="0.85"/>
+    <path d="M-7 1 L0 -3 L7 1" stroke="#cc4b2c" stroke-width="2" fill="none"/>
+    <!-- Braços erguidos -->
+    <path d="M-9 -8 L-18 -18" stroke="#7a522e" stroke-width="4" stroke-linecap="round"/>
+    <path d="M9 -8 L18 -16" stroke="#7a522e" stroke-width="4" stroke-linecap="round"/>
+    <!-- Cabeça e Grande Cocar -->
+    <circle cx="0" cy="-22" r="9" fill="#0d0d0d"/>
+    <circle cx="2" cy="-21" r="7" fill="#7a522e"/>
+    <circle cx="4" cy="-20" r="1.8" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    <!-- Cocar aberto -->
+    <path d="M-10 -26 L-15 -38 L-5 -29 L0 -42 L5 -29 L15 -38 L10 -26 Z" fill="#cc4b2c"/>
+  </g>
+
+  <!-- Dançarino 2 (Direita-centro, tocando flauta ritual / cantando) -->
+  <g transform="translate(475, 345) scale(1.15)">
+    <ellipse cx="0" cy="28" rx="12" ry="3.5" fill="#593f20" opacity="0.6"/>
+    <rect x="-7" y="5" width="5" height="19" rx="2.5" fill="#7a522e"/>
+    <rect x="2" y="8" width="5" height="20" rx="2.5" fill="#7a522e"/>
+    <rect x="-9" y="-12" width="18" height="22" rx="4" fill="#7a522e"/>
+    <!-- Pintura corporal ritual -->
+    <rect x="-9" y="-4" width="18" height="10" fill="#1a1a1a" opacity="0.85"/>
+    <path d="M-7 1 L0 -3 L7 1" stroke="#cc4b2c" stroke-width="2" fill="none"/>
+    <!-- Braços segurando flauta de bambu -->
+    <path d="M-9 -8 L-14 -15" stroke="#7a522e" stroke-width="4" stroke-linecap="round"/>
+    <path d="M9 -8 L-6 -16" stroke="#7a522e" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-22" y1="-17" x2="-4" y2="-15" stroke="#e3cca8" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Cabeça e Cocar -->
+    <circle cx="0" cy="-22" r="9" fill="#0d0d0d"/>
+    <circle cx="-2" cy="-21" r="7" fill="#7a522e"/>
+    <circle cx="-4" cy="-20" r="1.8" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    <path d="M-10 -26 L-15 -38 L-5 -29 L0 -42 L5 -29 L15 -38 L10 -26 Z" fill="#8b1a1a"/>
+  </g>
+
+  <!-- 9. Notas de Canto e Vibração do Ritual no Ar -->
+  <g stroke="#fcf6eb" stroke-width="1.5" fill="none" opacity="0.55" stroke-linecap="round">
+    <path d="M290 275 Q300 265 310 275"/>
+    <path d="M285 268 Q300 255 315 268"/>
+    <path d="M490 275 Q500 265 510 275"/>
+    <path d="M485 268 Q500 255 515 268"/>
+  </g>
+</svg>
           </div>
         </div>
       </div>
@@ -196,12 +888,219 @@
           <h3>Casamento e moradia.</h3>
           <p class="texto-literario">• Quando um homem Karajá se casa, ele muda-se para a casa da família da esposa (regra chamada de uxorilocalidade). Ele passa a ajudar o sogro na pesca e na roça, fortalecendo os laços entre as famílias.</p>
           <div class="timeline-icon-extras">
-            <svg viewBox="0 0 60 40" class="city-svg" aria-hidden="true">
-              <path d="M0 40 L0 20 L8 20 L8 10 L16 10 L16 20 L24 20 L24 0 L32 0 L32 20 L40 20 L40 15 L48 15 L48 20 L56 20 L56 30 L60 30 L60 40 Z" fill="#2d2d2d" opacity="0.6"/>
-              <circle cx="30" cy="5" r="3" fill="#d4b87a" opacity="0.3"/>
-              <circle cx="25" cy="8" r="1.5" fill="#d4b87a" opacity="0.2"/>
-              <circle cx="35" cy="7" r="2" fill="#d4b87a" opacity="0.2"/>
-            </svg>
+            <svg viewBox="0 0 800 500" class="karaja-wedding-home-svg" aria-hidden="true">
+  <defs>
+    <!-- Gradiente do Céu (Manhã dourada e acolhedora no Araguaia) -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7dfb9"/>
+      <stop offset="55%" stop-color="#f5ebd8"/>
+      <stop offset="100%" stop-color="#e8d4b3"/>
+    </linearGradient>
+
+    <!-- Brilho do Sol -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e07a3f" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e07a3f" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Gradiente da Terra -->
+    <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d9bd93"/>
+      <stop offset="100%" stop-color="#bfa074"/>
+    </linearGradient>
+
+    <!-- Gradiente do Rio Araguaia -->
+    <linearGradient id="riverGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b6e78"/>
+      <stop offset="50%" stop-color="#4d8894"/>
+      <stop offset="100%" stop-color="#34616b"/>
+    </linearGradient>
+
+    <!-- Textura de Palha -->
+    <pattern id="thatchPattern" width="12" height="12" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="12" y2="12" stroke="#5e4124" stroke-width="1" opacity="0.35"/>
+      <line x1="6" y1="0" x2="12" y2="6" stroke="#5e4124" stroke-width="1" opacity="0.25"/>
+      <line x1="0" y1="6" x2="6" y2="12" stroke="#5e4124" stroke-width="1" opacity="0.25"/>
+    </pattern>
+
+    <!-- Palmeira -->
+    <g id="palm-tree">
+      <path d="M0 0 Q-5 -45 2 -90" stroke="#6b4c2e" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q-25 -105 -40 -80" stroke="#4a6b3b" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q-20 -115 -25 -100" stroke="#5c8249" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q28 -105 42 -80" stroke="#4a6b3b" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q22 -115 28 -100" stroke="#5c8249" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M2 -90 Q0 -120 -5 -105" stroke="#689153" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <!-- 1. Céu e Sol -->
+  <rect width="800" height="500" fill="url(#skyGrad)"/>
+  <circle cx="140" cy="105" r="105" fill="url(#sunGlow)"/>
+  <circle cx="140" cy="105" r="34" fill="#e07a3f" opacity="0.8"/>
+
+  <!-- 2. Vegetação ao Fundo -->
+  <path d="M0 235 Q150 195 320 225 T640 210 T800 230 L800 255 L0 255 Z" fill="#87996b" opacity="0.65"/>
+  <path d="M0 245 Q220 215 450 240 T800 225 L800 260 L0 260 Z" fill="#687a4e" opacity="0.8"/>
+
+  <!-- 3. Terreno e Rio -->
+  <path d="M0 245 L800 245 L800 410 Q550 390 380 410 T0 400 Z" fill="url(#groundGrad)"/>
+  <path d="M0 400 Q200 390 380 410 T800 410 L800 500 L0 500 Z" fill="url(#riverGrad)"/>
+
+  <!-- Ondas no Rio -->
+  <g stroke="#a3cfd6" stroke-width="1.5" fill="none" opacity="0.45">
+    <path d="M60 440 Q90 433 120 440 T180 440"/>
+    <path d="M480 450 Q520 443 560 450 T640 450"/>
+    <path d="M260 475 Q300 468 340 475 T420 475"/>
+  </g>
+
+  <!-- 4. Árvores -->
+  <use href="#palm-tree" transform="translate(65, 255) scale(1.05)"/>
+  <use href="#palm-tree" transform="translate(745, 260) scale(1.15)"/>
+  <use href="#palm-tree" transform="translate(415, 250) scale(0.9)"/>
+
+  <!-- ========================================================= -->
+  <!-- 5. LADO DIREITO: A NOVA MORADIA DO CASAL (Oca Aberta)     -->
+  <!-- ========================================================= -->
+  <g transform="translate(450, 175)">
+    <!-- Sombra da moradia -->
+    <ellipse cx="135" cy="178" rx="145" ry="16" fill="#8c6f47" opacity="0.55"/>
+
+    <!-- Estrutura traseira / telhado arqueado grande -->
+    <path d="M10 175 Q10 20 135 20 Q260 20 260 175 Z" fill="#a67c52" stroke="#5e4124" stroke-width="2.5"/>
+    <path d="M10 175 Q10 20 135 20 Q260 20 260 175 Z" fill="url(#thatchPattern)"/>
+
+    <!-- Amarrados de palha no telhado -->
+    <path d="M22 125 Q135 115 248 125" stroke="#5e4124" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <path d="M42 75 Q135 65 228 75" stroke="#5e4124" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+    <!-- Corte Frontal Aberto mostrando o Interior da Moradia -->
+    <path d="M35 175 Q35 52 135 52 Q235 52 235 175 Z" fill="#473018" stroke="#362310" stroke-width="2"/>
+    <!-- Chão interno de barro batido -->
+    <ellipse cx="135" cy="173" rx="98" ry="8" fill="#8c6842"/>
+
+    <!-- Estacas de madeira da estrutura interna -->
+    <line x1="85" y1="64" x2="85" y2="173" stroke="#6b4826" stroke-width="5"/>
+    <line x1="185" y1="64" x2="185" y2="173" stroke="#6b4826" stroke-width="5"/>
+    <line x1="65" y1="95" x2="205" y2="95" stroke="#6b4826" stroke-width="4"/>
+
+    <!-- REDE DE DORMIR TRANÇADA (Símbolo do lar do casal) -->
+    <path d="M85 112 Q135 148 185 112" stroke="#f2e6d0" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M85 112 Q135 156 185 112" stroke="#cc4b2c" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+    <!-- Franjas da rede -->
+    <path d="M115 133 L115 144 M125 136 L125 147 M135 137 L135 148 M145 136 L145 147 M155 133 L155 144" stroke="#f2e6d0" stroke-width="1.5"/>
+
+    <!-- CESTARIA E CERÂMICAS RITXOKO DENTRO DA CASA -->
+    <!-- Cesto trançado à esquerda -->
+    <path d="M52 152 L56 172 L74 172 L78 152 Z" fill="#d9b982" stroke="#5e4124" stroke-width="1.2"/>
+    <path d="M54 160 L76 160 M55 166 L75 166" stroke="#8b1a1a" stroke-width="1.2"/>
+
+    <!-- Potes de barro e boneca Ritxoko à direita -->
+    <ellipse cx="202" cy="166" rx="10" ry="8" fill="#8b1a1a"/>
+    <ellipse cx="202" cy="159" rx="6" ry="2" fill="#2b1d10"/>
+    <path d="M194 166 L200 163 L206 168 L210 165" stroke="#f2e6d0" stroke-width="1" fill="none"/>
+
+    <ellipse cx="218" cy="168" rx="7" ry="6" fill="#cc4b2c"/>
+    <ellipse cx="218" cy="163" rx="4" ry="1.5" fill="#2b1d10"/>
+
+    <!-- Grafismo geométrico de boas-vindas no topo da moradia -->
+    <path d="M105 40 L115 32 L125 40 L135 32 L145 40 L155 32 L165 40" stroke="#8b1a1a" stroke-width="2.5" fill="none"/>
+  </g>
+
+  <!-- ========================================================= -->
+  <!-- 6. LADO ESQUERDO: A CERIMÔNIA DE CASAMENTO KARAJÁ         -->
+  <!-- ========================================================= -->
+
+  <!-- Tapete de palha e oferendas da união no chão -->
+  <ellipse cx="245" cy="368" rx="95" ry="18" fill="#c7a36b" stroke="#7a5832" stroke-width="1.5"/>
+  <ellipse cx="245" cy="368" rx="85" ry="13" fill="none" stroke="#8b1a1a" stroke-width="1.2" stroke-dasharray="6 4"/>
+
+  <!-- Cesto com presentes de casamento (frutas, peixe e cerâmica) aos pés do casal -->
+  <g transform="translate(245, 365)">
+    <path d="M-16 -6 L-12 6 L12 6 L16 -6 Z" fill="#a67c52" stroke="#473018" stroke-width="1.5"/>
+    <circle cx="-6" cy="-8" r="4" fill="#cc4b2c"/>
+    <circle cx="2" cy="-9" r="4.5" fill="#e6a835"/>
+    <circle cx="8" cy="-7" r="3.5" fill="#5c8249"/>
+  </g>
+
+  <!-- NOIVO KARAJÁ (Esquerda, com pintura cerimonial e cocar de festa) -->
+  <g transform="translate(195, 322) scale(1.38)">
+    <ellipse cx="0" cy="32" rx="13" ry="3.5" fill="#8c6f47" opacity="0.6"/>
+    <!-- Pernas -->
+    <rect x="-8" y="10" width="6" height="22" rx="3" fill="#8c6239"/>
+    <rect x="2" y="10" width="6" height="22" rx="3" fill="#8c6239"/>
+    <line x1="-8" y1="18" x2="-2" y2="18" stroke="#1a1a1a" stroke-width="2"/>
+    <line x1="2" y1="18" x2="8" y2="18" stroke="#1a1a1a" stroke-width="2"/>
+    <!-- Tronco com pintura de casamento (jenipapo e urucum) -->
+    <rect x="-10" y="-12" width="20" height="24" rx="5" fill="#8c6239"/>
+    <rect x="-10" y="6" width="20" height="5" fill="#1a1a1a"/>
+    <path d="M-7 -8 L0 -1 L7 -8" stroke="#1a1a1a" stroke-width="2.2" fill="none"/>
+    <path d="M-7 -3 L0 4 L7 -3" stroke="#cc4b2c" stroke-width="2" fill="none"/>
+    <!-- Braço esquerdo -->
+    <path d="M-10 -8 Q-15 2 -12 10" stroke="#8c6239" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <!-- Braço direito estendido segurando a mão da noiva -->
+    <path d="M10 -6 L22 2" stroke="#8c6239" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+    <!-- Cabeça e Grande Cocar Cerimonial -->
+    <circle cx="0" cy="-23" r="10" fill="#0d0d0d"/>
+    <circle cx="2" cy="-22" r="8" fill="#8c6239"/>
+    <path d="M-8 -25 Q2 -32 10 -24 L10 -28 Q0 -36 -8 -28 Z" fill="#0d0d0d"/>
+    <circle cx="4" cy="-21" r="2" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    <circle cx="6" cy="-23" r="1" fill="#1a1a1a"/>
+    <path d="M5 -18 Q7 -16 9 -18" stroke="#1a1a1a" stroke-width="1.2" fill="none"/>
+    <!-- Cocar aberto festivo -->
+    <path d="M-9 -28 L-13 -42 L-4 -31 L0 -46 L4 -31 L11 -42 L8 -28 Z" fill="#cc4b2c"/>
+    <path d="M-4 -31 L0 -42 L4 -31 Z" fill="#f2b84b"/>
+  </g>
+
+  <!-- NOIVA KARAJÁ (Direita, com adorno de penas, colares e saiote tradicional) -->
+  <g transform="translate(295, 322) scale(1.38)">
+    <ellipse cx="0" cy="32" rx="13" ry="3.5" fill="#8c6f47" opacity="0.6"/>
+    <!-- Pernas -->
+    <rect x="-7" y="10" width="5.5" height="22" rx="2.8" fill="#8c6239"/>
+    <rect x="1.5" y="10" width="5.5" height="22" rx="2.8" fill="#8c6239"/>
+    <line x1="-7" y1="20" x2="-1.5" y2="20" stroke="#8b1a1a" stroke-width="2"/>
+    <line x1="1.5" y1="20" x2="7" y2="20" stroke="#8b1a1a" stroke-width="2"/>
+    <!-- Tronco e Saiote cerimonial -->
+    <rect x="-9" y="-12" width="18" height="24" rx="4.5" fill="#8c6239"/>
+    <!-- Saiote de entrecasca/algodão decorado -->
+    <path d="M-10 3 L10 3 L12 13 L-12 13 Z" fill="#fcf6eb" stroke="#5e4124" stroke-width="1"/>
+    <line x1="-11" y1="8" x2="11" y2="8" stroke="#8b1a1a" stroke-width="1.8"/>
+    <!-- Colares vermelhos e pretos -->
+    <path d="M-7 -10 Q0 -4 7 -10" stroke="#8b1a1a" stroke-width="2.2" fill="none"/>
+    <path d="M-6 -7 Q0 -2 6 -7" stroke="#1a1a1a" stroke-width="1.5" fill="none"/>
+    <!-- Braço direito -->
+    <path d="M9 -8 Q14 2 11 10" stroke="#8c6239" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+    <!-- Braço esquerdo estendido de mãos dadas com o noivo -->
+    <path d="M-9 -6 L-22 2" stroke="#8c6239" stroke-width="4.2" fill="none" stroke-linecap="round"/>
+    <!-- Cabeça, Cabelo longo e Diadema de penas -->
+    <path d="M-10 -22 Q-11 -8 -8 -4 L8 -4 Q11 -8 10 -22 Z" fill="#0d0d0d"/>
+    <circle cx="0" cy="-23" r="10" fill="#0d0d0d"/>
+    <circle cx="-2" cy="-22" r="8" fill="#8c6239"/>
+    <circle cx="-4" cy="-21" r="2" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    <circle cx="-6" cy="-23" r="1" fill="#1a1a1a"/>
+    <path d="M-9 -18 Q-7 -16 -5 -18" stroke="#1a1a1a" stroke-width="1.2" fill="none"/>
+    <!-- Faixa e plumas na cabeça -->
+    <line x1="-9" y1="-27" x2="9" y2="-27" stroke="#cc4b2c" stroke-width="2.5"/>
+    <path d="M-2 -28 L0 -41 L3 -28 Z" fill="#fcf6eb" stroke="#8b1a1a" stroke-width="0.8"/>
+  </g>
+
+  <!-- Mãos unidas no centro entre o casal -->
+  <circle cx="245" cy="325" r="4.5" fill="#8c6239" stroke="#5e4124" stroke-width="1"/>
+
+  <!-- Símbolo de União acima do casal (Dois arcos / coração estilizado em urucum) -->
+  <g transform="translate(245, 242)">
+    <path d="M0 10 C-12 -2 -22 8 0 22 C22 8 12 -2 0 10 Z" fill="#cc4b2c" opacity="0.85"/>
+    <path d="M-26 14 L-18 8 L-10 14" stroke="#8b1a1a" stroke-width="1.8" fill="none"/>
+    <path d="M10 14 L18 8 L26 14" stroke="#8b1a1a" stroke-width="1.8" fill="none"/>
+  </g>
+
+  <!-- 7. Canoa da nova família na margem do rio -->
+  <g transform="translate(80, 428)">
+    <ellipse cx="50" cy="13" rx="54" ry="5.5" fill="#23444a" opacity="0.45"/>
+    <path d="M0 3 Q50 18 100 3 Q86 14 50 14 Q14 14 0 3 Z" fill="#6b4423" stroke="#3d2511" stroke-width="1.5"/>
+    <path d="M22 8 L31 11 L40 8 L49 11 L58 8 L67 11 L76 8" stroke="#f2e6d0" stroke-width="1.2" fill="none"/>
+  </g>
+</svg>
           </div>
         </div>
       </div>
@@ -220,12 +1119,14 @@
 
         <div class="char-card fade-slide">
           <div class="char-icon">
-            <svg viewBox="0 0 80 80" aria-hidden="true">
-              <circle cx="40" cy="30" r="14" fill="none" stroke="#d4b87a" stroke-width="2"/>
-              <path d="M18 70 Q30 55 40 60 Q50 55 62 70" fill="none" stroke="#d4b87a" stroke-width="2"/>
-              <path d="M35 35 L45 45 M45 35 L35 45" stroke="#cc4b2c" stroke-width="1.5" opacity="0.6"/>
-              <rect x="35" y="46" width="10" height="14" fill="none" stroke="#d4b87a" stroke-width="1.5"/>
-            </svg>
+          <svg width="48" height="48" viewBox="0 0 60 60" aria-hidden="true">
+  <circle cx="30" cy="30" r="27" fill="#f2e6d0" stroke="#8c6239" stroke-width="2.5"/>
+  <!-- Vaso / Cerâmica estilizada -->
+  <path d="M22 22 L38 22 L35 27 Q43 34 38 43 L22 43 Q17 34 25 27 Z" fill="#8b1a1a"/>
+  <rect x="21" y="19" width="18" height="3" rx="1.5" fill="#5e4124"/>
+  <!-- Grafismo branco/bege no vaso -->
+  <path d="M21 35 L25 31 L30 35 L35 31 L39 35" stroke="#f2e6d0" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+</svg>
           </div>
           <h3>Kynyxiwe (ou Ynyxiwè).</h3>
           <span class="char-tag"></span>
@@ -234,13 +1135,15 @@
 
         <div class="char-card fade-slide">
           <div class="char-icon">
-            <svg viewBox="0 0 80 80" aria-hidden="true">
-              <circle cx="40" cy="28" r="14" fill="none" stroke="#8b1a1a" stroke-width="2"/>
-              <path d="M18 70 Q30 55 40 60 Q50 55 62 70" fill="none" stroke="#8b1a1a" stroke-width="2"/>
-              <path d="M25 40 L55 40" stroke="#8b1a1a" stroke-width="1.5" opacity="0.5"/>
-              <rect x="25" y="44" width="8" height="16" fill="none" stroke="#8b1a1a" stroke-width="1.5" opacity="0.5"/>
-              <rect x="47" y="44" width="8" height="16" fill="none" stroke="#8b1a1a" stroke-width="1.5" opacity="0.5"/>
-            </svg>
+           <svg width="48" height="48" viewBox="0 0 60 60" aria-hidden="true">
+  <circle cx="30" cy="30" r="27" fill="#f2e6d0" stroke="#8c6239" stroke-width="2.5"/>
+  <!-- Mini Oca -->
+  <path d="M16 34 Q16 16 30 16 Q44 16 44 34 Z" fill="#a67c52" stroke="#5e4124" stroke-width="1.5"/>
+  <path d="M26 34 L26 27 Q30 24 34 27 L34 34 Z" fill="#2b1d10"/>
+  <!-- Ondas do Rio Araguaia -->
+  <path d="M13 40 Q21 36 30 40 T47 40" stroke="#3b6e78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M16 46 Q23 42 30 46 T44 46" stroke="#4d8894" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
           </div>
           <h3>Koboi. </h3>
           <span class="char-tag"></span>
@@ -249,11 +1152,15 @@
 
         <div class="char-card fade-slide">
           <div class="char-icon">
-            <svg viewBox="0 0 80 80" aria-hidden="true">
-              <circle cx="40" cy="28" r="14" fill="none" stroke="#cc4b2c" stroke-width="2"/>
-              <path d="M18 70 Q30 50 40 55 Q50 50 62 70" fill="none" stroke="#cc4b2c" stroke-width="2"/>
-              <path d="M32 32 Q40 38 48 32" fill="none" stroke="#cc4b2c" stroke-width="1.5"/>
-            </svg>
+           <svg width="48" height="48" viewBox="0 0 60 60" aria-hidden="true">
+  <circle cx="30" cy="30" r="27" fill="#f2e6d0" stroke="#8c6239" stroke-width="2.5"/>
+  <!-- Balão de diálogo com grafismo -->
+  <rect x="14" y="16" width="32" height="23" rx="7" fill="#fcf6eb" stroke="#5e4124" stroke-width="2"/>
+  <path d="M22 39 L18 46 L29 39 Z" fill="#fcf6eb" stroke="#5e4124" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="23" y1="39" x2="28" y2="39" stroke="#fcf6eb" stroke-width="2.5"/>
+  <!-- Grafismo dentro do balão -->
+  <path d="M20 29 L25 24 L30 29 L35 24 L40 29" stroke="#cc4b2c" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
           </div>
           <h3>Aruanã (Ijasò). </h3>
           <span class="char-tag"></span>
@@ -263,13 +1170,16 @@
 
         <div class="char-card fade-slide">
           <div class="char-icon">
-            <svg viewBox="0 0 80 80" aria-hidden="true">
-              <circle cx="40" cy="28" r="14" fill="none" stroke="#cc4b2c" stroke-width="2"/>
-              <path d="M18 70 Q30 52 40 58 Q50 52 62 70" fill="none" stroke="#cc4b2c" stroke-width="2"/>
-              <path d="M28 40 L52 40" stroke="#cc4b2c" stroke-width="1.5"/>
-              <circle cx="32" cy="38" r="2" fill="#cc4b2c" opacity="0.5"/>
-              <circle cx="48" cy="38" r="2" fill="#cc4b2c" opacity="0.5"/>
-            </svg>
+           <svg width="48" height="48" viewBox="0 0 60 60" aria-hidden="true">
+  <circle cx="30" cy="30" r="27" fill="#f2e6d0" stroke="#8c6239" stroke-width="2.5"/>
+  <!-- Três penas do cocar ritual -->
+  <path d="M28 38 Q16 25 15 17 Q24 22 29 37 Z" fill="#8b1a1a"/>
+  <path d="M30 37 Q27 20 30 12 Q33 20 30 37 Z" fill="#cc4b2c"/>
+  <path d="M32 38 Q44 25 45 17 Q36 22 31 37 Z" fill="#8b1a1a"/>
+  <!-- Faixa geométrica na base -->
+  <rect x="19" y="38" width="22" height="6" rx="2" fill="#1a1a1a"/>
+  <path d="M21 41 L25 39 L30 41 L35 39 L39 41" stroke="#f2e6d0" stroke-width="1.2" fill="none"/>
+</svg>
           </div>
           <h3>Jijukè Karajá.</h3>
           <span class="char-tag"></span>
@@ -278,12 +1188,13 @@
 
         <div class="char-card fade-slide">
           <div class="char-icon">
-            <svg viewBox="0 0 80 80" aria-hidden="true">
-              <circle cx="40" cy="28" r="14" fill="none" stroke="#d4b87a" stroke-width="2"/>
-              <path d="M18 70 Q30 48 40 56 Q50 48 62 70" fill="none" stroke="#d4b87a" stroke-width="2"/>
-              <path d="M30 30 Q40 25 50 30" fill="none" stroke="#d4b87a" stroke-width="1"/>
-              <path d="M35 36 L38 42 M45 36 L42 42" stroke="#d4b87a" stroke-width="1" opacity="0.6"/>
-            </svg>
+           <svg width="48" height="48" viewBox="0 0 60 60" aria-hidden="true">
+  <circle cx="30" cy="30" r="27" fill="#f2e6d0" stroke="#8c6239" stroke-width="2.5"/>
+  <!-- Coração estilizado em urucum -->
+  <path d="M30 25 C23 16 14 23 30 37 C46 23 37 16 30 25 Z" fill="#cc4b2c"/>
+  <!-- Grafismos laterais de aliança/laço -->
+  <path d="M13 43 L21 38 L30 43 L39 38 L47 43" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
           </div>
           <h3>Koixaru Karajá.</h3>
           <span class="char-tag"></span>
@@ -292,12 +1203,17 @@
 
         <div class="char-card fade-slide">
           <div class="char-icon">
-            <svg viewBox="0 0 80 80" aria-hidden="true">
-              <circle cx="40" cy="28" r="14" fill="none" stroke="#3a3a3a" stroke-width="2"/>
-              <path d="M18 70 Q30 58 40 62 Q50 58 62 70" fill="none" stroke="#3a3a3a" stroke-width="2"/>
-              <path d="M30 40 L50 40" stroke="#3a3a3a" stroke-width="1.5"/>
-              <circle cx="40" cy="20" r="2" fill="#d4b87a" opacity="0.4"/>
-            </svg>
+            <svg width="48" height="48" viewBox="0 0 60 60" aria-hidden="true">
+  <circle cx="30" cy="30" r="27" fill="#f2e6d0" stroke="#8c6239" stroke-width="2.5"/>
+  <!-- Grande cocar em leque (símbolo de liderança/cacique) -->
+  <path d="M16 34 L12 20 L21 28 L25 14 L30 26 L35 14 L39 28 L48 20 L44 34 Z" fill="#cc4b2c"/>
+  <path d="M21 34 L25 18 L30 28 L35 18 L39 34 Z" fill="#8b1a1a"/>
+  <!-- Faixa frontal do cocar -->
+  <rect x="15" y="33" width="30" height="6" rx="2" fill="#1a1a1a"/>
+  <path d="M18 36 L22 34 L26 36 L30 34 L34 36 L38 34 L42 36" stroke="#f2e6d0" stroke-width="1.3" fill="none"/>
+  <!-- Traço base de sustentação -->
+  <line x1="20" y1="43" x2="40" y2="43" stroke="#8c6239" stroke-width="2.2" stroke-linecap="round"/>
+</svg>
           </div>
           <h3>Cacique Watau Karajá.</h3>
           <span class="char-tag"></span>
@@ -306,12 +1222,16 @@
 
         <div class="char-card fade-slide">
           <div class="char-icon">
-            <svg viewBox="0 0 80 80" aria-hidden="true">
-              <circle cx="40" cy="28" r="14" fill="none" stroke="#3a3a3a" stroke-width="2"/>
-              <path d="M18 70 Q30 60 40 64 Q50 60 62 70" fill="none" stroke="#3a3a3a" stroke-width="2"/>
-              <path d="M28 35 L52 35" stroke="#3a3a3a" stroke-width="1.5"/>
-              <rect x="33" y="40" width="14" height="10" fill="none" stroke="#d4b87a" stroke-width="1" opacity="0.4"/>
-            </svg>
+           <svg width="48" height="48" viewBox="0 0 60 60" aria-hidden="true">
+  <circle cx="30" cy="30" r="27" fill="#f2e6d0" stroke="#8c6239" stroke-width="2.5"/>
+  <!-- Braços do Rio Araguaia contornando o território -->
+  <path d="M30 11 Q13 30 30 49" stroke="#3b6e78" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M30 11 Q47 30 30 49" stroke="#4d8894" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Território protegido (Ilha do Bananal) no centro -->
+  <path d="M30 16 Q20 30 30 44 Q40 30 30 16 Z" fill="#687a4e" stroke="#465436" stroke-width="1.5"/>
+  <!-- Grafismo central de resistência e identidade -->
+  <path d="M26 30 L30 25 L34 30 L30 35 Z" fill="#cc4b2c"/>
+</svg>
           </div>
           <h3>Idjarruri Karajá.</h3>
           <span class="char-tag"></span>
@@ -325,8 +1245,8 @@
 <!-- ===== TEMAS ===== -->
 <section class="section fade-section" id="temas">
   <div class="container">
-    <h2 class="section-title">Lorem Ipsum</h2>
-    <p class="section-subtitle">Dolor sit amet consectetur adipiscing</p>
+    <h2 class="section-title">Rituais</h2>
+    <p class="section-subtitle"></p>
 
     <div class="temas-grid">
 
@@ -389,36 +1309,79 @@
 
     <!-- Dom Quixote SVG -->
     <div class="quixote-container fade-slide">
-      <svg viewBox="0 0 200 280" class="quixote-svg" aria-label="Dom Quixote abstrato">
-        <!-- Body / Armor -->
-        <rect x="80" y="80" width="40" height="60" rx="4" fill="none" stroke="#d4b87a" stroke-width="2" opacity="0.7"/>
-        <rect x="75" y="90" width="10" height="30" rx="2" fill="none" stroke="#d4b87a" stroke-width="1.5" opacity="0.5"/>
-        <rect x="115" y="90" width="10" height="30" rx="2" fill="none" stroke="#d4b87a" stroke-width="1.5" opacity="0.5"/>
-        <!-- Head -->
-        <circle cx="100" cy="60" r="20" fill="none" stroke="#d4b87a" stroke-width="2"/>
-        <!-- Helmet / Mambrino's helmet -->
-        <ellipse cx="100" cy="45" rx="14" ry="8" fill="none" stroke="#d4b87a" stroke-width="1.5"/>
-        <!-- Legs -->
-        <line x1="90" y1="140" x2="85" y2="200" stroke="#d4b87a" stroke-width="2"/>
-        <line x1="110" y1="140" x2="115" y2="200" stroke="#d4b87a" stroke-width="2"/>
-        <line x1="85" y1="200" x2="80" y2="210" stroke="#d4b87a" stroke-width="1.5"/>
-        <line x1="115" y1="200" x2="120" y2="210" stroke="#d4b87a" stroke-width="1.5"/>
-        <!-- Lance -->
-        <g class="lance-group">
-          <line x1="130" y1="50" x2="180" y2="10" stroke="#cc4b2c" stroke-width="2.5" stroke-linecap="round"/>
-          <line x1="170" y1="4" x2="185" y2="12" stroke="#cc4b2c" stroke-width="1.5"/>
-          <line x1="170" y1="16" x2="185" y2="8" stroke="#cc4b2c" stroke-width="1.5"/>
-        </g>
-        <!-- Shield -->
-        <ellipse cx="70" cy="110" rx="10" ry="16" fill="none" stroke="#d4b87a" stroke-width="1.5" opacity="0.5" transform="rotate(-15 70 110)"/>
-        <!-- Windmill reference -->
-        <g class="windmill-ref" opacity="0.2">
-          <line x1="30" y1="140" x2="30" y2="210" stroke="#d4b87a" stroke-width="1"/>
-          <line x1="30" y1="140" x2="50" y2="130" stroke="#d4b87a" stroke-width="1"/>
-          <line x1="30" y1="140" x2="15" y2="125" stroke="#d4b87a" stroke-width="1"/>
-          <line x1="30" y1="140" x2="10" y2="145" stroke="#d4b87a" stroke-width="1"/>
-        </g>
-      </svg>
+<svg width="80" height="112" viewBox="0 0 200 280" class="karaja-guardian-svg" aria-label="Guardião Karajá abstrato">
+  <defs>
+    <!-- Brilho sutil atrás da figura -->
+    <radialGradient id="guardianGlow" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#cc4b2c" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#cc4b2c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Aura de fundo -->
+  <circle cx="100" cy="120" r="85" fill="url(#guardianGlow)"/>
+
+  <!-- Referência de fundo: Ondas do Rio Araguaia e Sol -->
+  <g class="river-ref" opacity="0.28">
+    <circle cx="38" cy="145" r="14" fill="none" stroke="#cc4b2c" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <path d="M12 175 Q26 168 40 175 T68 175" stroke="#d4b87a" stroke-width="1.2" fill="none"/>
+    <path d="M18 185 Q32 178 46 185 T74 185" stroke="#d4b87a" stroke-width="1.2" fill="none"/>
+  </g>
+
+  <!-- Cocar Cerimonial -->
+  <g class="cocar-group">
+    <line x1="100" y1="38" x2="100" y2="14" stroke="#cc4b2c" stroke-width="2" stroke-linecap="round"/>
+    <line x1="92" y1="40" x2="82" y2="18" stroke="#d4b87a" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="108" y1="40" x2="118" y2="18" stroke="#d4b87a" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="85" y1="44" x2="70" y2="28" stroke="#cc4b2c" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="115" y1="44" x2="130" y2="28" stroke="#cc4b2c" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M82 47 Q100 41 118 47" stroke="#d4b87a" stroke-width="2.2" fill="none"/>
+  </g>
+
+  <!-- Cabeça e Pintura Facial Karajá -->
+  <circle cx="100" cy="60" r="19" fill="none" stroke="#d4b87a" stroke-width="2"/>
+  <circle cx="91" cy="63" r="3" fill="none" stroke="#cc4b2c" stroke-width="1.3"/>
+  <circle cx="109" cy="63" r="3" fill="none" stroke="#cc4b2c" stroke-width="1.3"/>
+
+  <!-- Colar Cerimonial -->
+  <path d="M88 81 Q100 90 112 81" stroke="#cc4b2c" stroke-width="2" fill="none"/>
+
+  <!-- Tronco Geométrico -->
+  <rect x="80" y="83" width="40" height="58" rx="6" fill="none" stroke="#d4b87a" stroke-width="2" opacity="0.85"/>
+  <polygon points="100,94 111,108 100,122 89,108" fill="none" stroke="#cc4b2c" stroke-width="1.6"/>
+  <circle cx="100" cy="108" r="2.5" fill="#d4b87a"/>
+  <path d="M80 131 L87 126 L93 131 L100 126 L107 131 L113 126 L120 131" stroke="#d4b87a" stroke-width="1.5" fill="none"/>
+
+  <!-- Braços -->
+  <path d="M76 92 Q68 108 72 124" stroke="#d4b87a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.75"/>
+  <path d="M124 92 Q132 105 135 95" stroke="#d4b87a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.75"/>
+
+  <!-- Lança Ritualística com Penas -->
+  <g class="spear-group">
+    <line x1="128" y1="165" x2="172" y2="18" stroke="#cc4b2c" stroke-width="2.4" stroke-linecap="round"/>
+    <polygon points="172,18 164,33 175,30" fill="#d4b87a"/>
+    <path d="M161 52 Q150 48 147 56" stroke="#d4b87a" stroke-width="1.5" fill="none"/>
+    <path d="M160 56 Q149 54 148 62" stroke="#cc4b2c" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- Escudo Trançado / Maracá Ritual -->
+  <g transform="translate(65, 114) rotate(-12)">
+    <ellipse cx="0" cy="0" rx="11" ry="17" fill="none" stroke="#d4b87a" stroke-width="1.6" opacity="0.75"/>
+    <path d="M-7 -4 L0 -10 L7 -4 L0 2 Z" fill="none" stroke="#cc4b2c" stroke-width="1.2"/>
+    <path d="M-7 6 L0 0 L7 6 L0 12 Z" fill="none" stroke="#cc4b2c" stroke-width="1.2"/>
+  </g>
+
+  <!-- Pernas com Pintura Corporal -->
+  <line x1="90" y1="141" x2="86" y2="202" stroke="#d4b87a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="110" y1="141" x2="114" y2="202" stroke="#d4b87a" stroke-width="2" stroke-linecap="round"/>
+  <line x1="85" y1="168" x2="92" y2="168" stroke="#cc4b2c" stroke-width="2"/>
+  <line x1="108" y1="168" x2="115" y2="168" stroke="#cc4b2c" stroke-width="2"/>
+  <line x1="86" y1="202" x2="79" y2="208" stroke="#d4b87a" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="114" y1="202" x2="121" y2="208" stroke="#d4b87a" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Linha de chão sutil -->
+  <line x1="55" y1="214" x2="145" y2="214" stroke="#d4b87a" stroke-width="1" opacity="0.35" stroke-dasharray="4 4"/>
+</svg>
     </div>
   </div>
 </section>
@@ -427,7 +1390,7 @@
 <!-- ===== AUTOR ===== -->
 <section class="section fade-section" id="autor">
   <div class="container">
-    <h2 class="section-title">Lorem Ipsum</h2>
+    <h2 class="section-title">Os Guardiões do Araguaia</h2>
 
     <div class="autor-content fade-slide">
       <div class="autor-photo">
@@ -461,12 +1424,15 @@
       </div>
 
       <div class="autor-info">
-        <h3>Lorem Ipsum</h3>
+        <h3>A Importância do Povo Karajá para o Brasil</h3>
         <p class="texto-literario">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Os Karajá, que se autodenominam Iny, ocupam um lugar fundamental na história, na cultura e na preservação ambiental do Brasil. Habitando há séculos as margens do Rio Araguaia e a Ilha do Bananal — a maior ilha fluvial do mundo —, esse povo indígena construiu uma relação profunda de respeito e equilíbrio com a natureza, tornando-se verdadeiro guardião de um dos ecossistemas mais ricos do país, na transição entre o Cerrado e a Floresta Amazônica.
         </p>
         <p class="texto-literario">
-          <em>Lorem Ipsum Dolor</em> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in <em>Reprehenderit In Voluptate</em> velit esse cillum dolore eu fugiat nulla pariatur, excepteur sint occaecat cupidatat non proident.
+          <em>Na área cultural e artística, a contribuição dos Karajá é reconhecida nacional e internacionalmente. Suas famosas bonecas de cerâmica, chamadas Ritxòkò, vão muito além de simples objetos de artesanato: elas registram o cotidiano, os mitos e os rituais da comunidade, transmitindo conhecimento de geração em geração. Pela sua relevância estética e histórica, o saber fazer dessas bonecas foi tombado pelo IPHAN como Patrimônio Cultural Imaterial do Brasil. Além disso, sua língua materna, o Iny rybè, enriquece a diversidade linguística brasileira com características únicas no mundo, como as diferenças de pronúncia entre homens e mulheres.
+        </p>
+        <p class="texto-literario">
+          <em>Historicamente, os Karajá também foram protagonistas na formação do interior do Brasil. Mesmo diante das dificuldades causadas pelo avanço da colonização, por doenças e pela pressão sobre suas terras, resistiram e mantiveram vivos seus rituais sagrados, como a Festa de Aruanã e o Hetohokỹ. Hoje, a presença e a luta do povo Karajá continuam essenciais para lembrar o Brasil da importância de valorizar suas raízes originárias, proteger seus rios e respeitar a sabedoria dos povos indígenas.
         </p>
         <div class="autor-destaques">
           <div class="destaque-item">
